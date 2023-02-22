@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  {
+    path: 'welcome',
+    loadChildren: () =>
+      import('./modules/home/home.module').then((m) => m.HomeModule),
+  },
+];
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent],
+  imports: [RouterModule.forRoot(routes), BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

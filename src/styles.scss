@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/fonts/fonts.css";
+@import "./assets/scss/animations.scss";
+body {
+  font-family: Montserrat;
+  background-color: #1f1f1f;
+  color: white;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
