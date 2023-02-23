@@ -1,0 +1,28 @@
+<section class="main">
+  <div class="qomander-logo-container">
+    <img
+      class="qomander-logo"
+      src="./assets/images/logo/qomander.svg"
+      alt="qomander"
+    />
+  </div>
+  <div class="padding"></div>
+  <div class="categories-container">
+    <ng-container *ngFor="let cat of FoodCategoriesS.foodCategories">
+      <div class="category">
+        <img
+          [src]="cat.picture"
+          alt="{{ cat.name }}"
+          class="category-picture"
+        />
+        <p class="category-name">{{ cat.name }}</p>
+        <img
+          src="./assets/images/icons/check.svg"
+          alt="check"
+          class="check-mark"
+        />
+      </div>
+    </ng-container>
+  </div>
+  <div class="scroll-shadow"></div>
+</section>

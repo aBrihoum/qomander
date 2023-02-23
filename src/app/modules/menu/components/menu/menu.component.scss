@@ -1,0 +1,13 @@
+.main-view {
+  display: flex;
+  height: 100%;
+}
+.menu-container {
+  width: 100%;
+  margin-inline: 20px;
+  .heading {
+    margin-top: 140px;
+    font-size: 45px;
+    font-weight: bold;
+  }
+}

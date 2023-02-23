@@ -1,53 +1,62 @@
 @import "/src/assets/scss/colors";
-.qomander {
+.main {
+  text-align: center;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  &-logo {
-    max-width: 115px;
-    width: 100%;
-  }
-  &-title {
-    font-family: "RR Beaver";
-    color: #d65745;
-    margin-left: 33px;
-    font-size: 63px;
-  }
-}
-.heading {
-  margin-top: 70px;
-  margin-bottom: 70px;
-  font-size: 55px;
-  font-weight: bold;
-}
-.order-type-container {
-  border-top: 15px solid white;
-  margin-inline: -25px;
-  margin-bottom: -25px;
-  border-radius: 100% 0% 0% 0% / 25% 37% 25% 42%;
-  background-color: $primary;
-  position: relative;
-  padding-bottom: 105px;
-  .order-type {
-    display: flex;
-    margin-top: 124px;
-    flex-wrap: wrap;
-    justify-content: center;
-    .eat-in,
-    .take-out {
-      cursor: pointer;
-      margin-inline: 27px;
-      background-color: $secondary;
-      padding: 34px 40px 17px 40px;
-      border-radius: 20px;
-      .button-picture {
+  flex-direction: column;
+  .upper-section {
+    padding-top: 140px;
+    .qomander {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      &-logo {
+        max-width: 115px;
         width: 100%;
-        max-width: 130px;
       }
-      .title {
-        font-weight: bold;
-        padding-top: 20px;
+      &-title {
+        font-family: "RR Beaver";
+        color: #d65745;
+        margin-left: 33px;
+        font-size: 63px;
+      }
+    }
+    .heading {
+      margin-top: 96px;
+      margin-bottom: 70px;
+      font-size: 55px;
+      font-weight: bold;
+    }
+  }
+
+  .order-type-container {
+    border-top: 15px solid white;
+    margin-inline: -25px;
+    margin-bottom: -25px;
+    border-radius: 100% 0% 0% 0%/20% 37% 25% 42%;
+    background-color: $primary;
+    height: 100%;
+    .order-type {
+      display: flex;
+      margin-top: 124px;
+      flex-wrap: wrap;
+      justify-content: center;
+      .eat-in,
+      .take-out {
+        cursor: pointer;
+        margin-inline: 27px;
+        background-color: $secondary;
+        padding: 34px 40px 17px 40px;
+        border-radius: 20px;
+        .button-picture {
+          width: 100%;
+          max-width: 130px;
+        }
+        .title {
+          font-weight: bold;
+          padding-top: 20px;
+        }
       }
     }
   }

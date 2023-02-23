@@ -1,76 +1,41 @@
 @import "/src/assets/scss/colors";
-$logo-size: 30px;
-.language-main {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  height: 65px;
+@import "/src/assets/scss/vars";
+:host {
   position: relative;
-  .selected-language-picture {
-    max-width: $logo-size;
+  display: block;
+}
+.selected-language {
+  position: absolute;
+  top: 25px;
+  right: 28px;
+  &-picture {
+    max-width: 42px;
     width: 100%;
     margin-left: 13px;
     cursor: pointer;
     position: relative;
   }
-  .language-list {
-    background-color: $secondary;
-    border-radius: 10px;
-    padding: 6px 4px 6px 9px;
-    position: absolute;
-    position: absolute;
-    top: -6px;
-    right: -4px;
-    &.closed {
-      animation: scale-out-tr 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
-    &.open {
-      animation: scale-in-tr 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
-    &-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+}
+
+.language-list {
+  background-color: $secondary;
+  border-radius: 10px;
+  padding: 6px 4px 6px 9px;
+  position: absolute;
+  top: 19px;
+  right: 24px;
+  &.closed {
+    animation: scale-out-tr 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &.open {
+    animation: scale-in-tr 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-title {
+    font-size: 22px;
   }
 }
-// .lang {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-end;
-//   position: relative;
-//   height: 65px;
-//   &-menu {
-//     background-color: $secondary;
-//     border-radius: 10px;
-//     padding: 6px 4px 6px 9px;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     transition: background-color 0.1s ease;
-//     &.hide-list {
-//       background-color: transparent;
-//       // transition: background-color 0.5s ease;
-//     }
-//     .lang-list {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       margin-bottom: 10px;
-//       cursor: pointer;
-//       .lang-name {
-//         // font-size: 0px;
-//         &.show-name {
-//           transition: font-size 0.2s ease;
-//           font-size: 20px;
-//         }
-//       }
-//     }
-
-//     img.lang-logo {
-//       max-width: $logo-size;
-//       width: 100%;
-//       margin-left: 13px;
-//     }
-//   }
-// }

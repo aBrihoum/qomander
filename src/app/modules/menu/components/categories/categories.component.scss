@@ -1,0 +1,78 @@
+@import "/src/assets/scss/colors";
+
+:host {
+  background-color: $secondary;
+  max-width: 150px;
+  width: 100%;
+  margin-bottom: -25px;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+.main {
+  padding-inline: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  .qomander-logo-container {
+    padding-top: 45px;
+    .qomander-logo {
+      max-width: 67px;
+      width: 100%;
+      margin: auto;
+    }
+  }
+  .padding {
+    padding-top: 185px;
+  }
+  .categories-container {
+    padding-inline: 10px;
+    padding-bottom: 40px;
+    overflow-y: auto;
+    .category {
+      background-color: $grey;
+      margin-bottom: 22px;
+      padding: 10px;
+      border-radius: 30px;
+      transition: outline-color 0.3s;
+      cursor: pointer;
+      &-picture {
+        max-height: 65px;
+        margin: auto;
+      }
+      &-name {
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        padding-top: 5px;
+      }
+      &.selected {
+        outline: 2.5px solid $primary;
+        position: relative;
+        img.check-mark {
+          visibility: visible !important;
+        }
+      }
+      img.check-mark {
+        width: 30px;
+        position: absolute;
+        top: -11px;
+        right: -9px;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .scroll-shadow {
+    margin-left: -5px;
+    width: 100%;
+    height: 109px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.91) 100%
+    );
+  }
+}

@@ -7,14 +7,16 @@ import { Component } from '@angular/core';
   </section>`,
   styles: [
     `
+      @import '/src/assets/scss/_vars.scss';
       section.boot {
         background-color: black;
         border-radius: 8px;
-        max-width: 700px;
-        width: 100%;
+        border: 6px solid #979797;
+        overflow-y: auto;
         margin: 25px auto;
-        padding: 25px;
-        border: 4px solid #979797;
+        padding: $boot_padding;
+        width: 720px;
+        height: 1080px;
       }
     `,
   ],
