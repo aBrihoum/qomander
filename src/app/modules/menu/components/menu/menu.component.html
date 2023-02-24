@@ -1,10 +1,10 @@
 <app-language-bar></app-language-bar>
 <section class="main-view">
-  <app-categories></app-categories>
+  <app-categories (categoryChangedEvent)="refreshMealList()"></app-categories>
   <section class="menu-container">
     <h1 class="heading">What will you be eating today</h1>
     <div class="menu-items" #menuItems>
-      <ng-container *ngFor="let meal of MealListS.mealList(); last as last">
+      <ng-container *ngFor="let meal of mealList; last as last">
         <div class="item">
           <img
             class="item-picture"

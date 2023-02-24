@@ -6,10 +6,14 @@ import { MEALLIST } from './meal-list.model';
   providedIn: 'root',
 })
 export class MealListService {
-  constructor(private MealCategoriesS: MealCategoriesService) {}
-  list = MEALLIST;
-  mealList() {
-    const selectedCategoryKey = this.MealCategoriesS.selectedCategory.key;
-    return this.list.filter((meal) => meal.categoryKey === selectedCategoryKey);
+  constructor(private MealCategories$: MealCategoriesService) {}
+
+  // ~~ ~~ ~~
+  private readonly mealList = MEALLIST;
+  // ~~ ~~ ~~
+
+  returnMealList() {
+    const selectedCategoryKey = this.MealCategories$.selectedMealCategory.key;
+    return this.mealList.filter((meal) => meal.categoryKey === selectedCategoryKey);
   }
 }

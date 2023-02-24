@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, Input } from '@angular/core';
+import { MealListT } from 'src/app/modules/shared/services/meal-list/meal-list.model';
 import { MealListService } from './../../../shared/services/meal-list/meal-list.service';
 
 @Component({
@@ -7,9 +8,17 @@ import { MealListService } from './../../../shared/services/meal-list/meal-list.
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  constructor(public MealListS: MealListService) {}
+  constructor(private MealList$: MealListService) {}
+
+  // ~~ ~~ ~~
+  mealList: MealListT[] = this.MealList$.returnMealList();
   @ViewChild('menuItems') menuItemsRef?: ElementRef<HTMLDivElement>;
   showScrollShadow = false;
+  // ~~ ~~ ~~
+
+  refreshMealList() {
+    this.mealList = this.MealList$.returnMealList();
+  }
 
   divHaveScrollBar() {
     /* 
@@ -19,11 +28,8 @@ export class MenuComponent {
     */
     const haveAScrollBar =
       this.menuItemsRef &&
-      this.menuItemsRef.nativeElement.scrollHeight >
-        this.menuItemsRef.nativeElement.clientHeight;
+      this.menuItemsRef.nativeElement.scrollHeight > this.menuItemsRef.nativeElement.clientHeight;
 
-    haveAScrollBar
-      ? (this.showScrollShadow = true)
-      : (this.showScrollShadow = false);
+    haveAScrollBar ? (this.showScrollShadow = true) : (this.showScrollShadow = false);
   }
 }

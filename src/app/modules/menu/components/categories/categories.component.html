@@ -9,12 +9,12 @@
   <div class="padding"></div>
   <div class="categories-container" #catContainer>
     <ng-container
-      *ngFor="let cat of mealCategoriesS.categories; index as i; last as last"
+      *ngFor="let cat of mealCategories; index as i; last as last"
     >
       <div
         class="category"
-        [class.selected]="cat.name === mealCategoriesS.selectedCategory.name"
-        (click)="changeCategory(i)"
+        [class.selected]="cat.name === selectedMealCategory.name"
+        (click)="changeMealCategory(i)"
       >
         <img
           [src]="cat.picture"

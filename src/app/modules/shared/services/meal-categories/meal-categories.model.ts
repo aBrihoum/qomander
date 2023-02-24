@@ -7,7 +7,7 @@ export enum CategoriesE {
   chicken = 'chicken',
 }
 
-type MealCategoriesT = {
+export type MealCategoriesT = {
   name: CategoriesE;
   picture: string;
   key: keyof typeof CategoriesE;

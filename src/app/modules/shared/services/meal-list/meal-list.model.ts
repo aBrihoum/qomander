@@ -1,6 +1,6 @@
 import { CategoriesE } from '../meal-categories/meal-categories.model';
 
-type MealListT = {
+export type MealListT = {
   name: string;
   categoryKey: keyof typeof CategoriesE;
   picture: string;
