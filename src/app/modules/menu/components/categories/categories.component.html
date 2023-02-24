@@ -1,32 +1,18 @@
 <section class="main">
-  <div class="qomander-logo-container">
-    <img
-      class="qomander-logo"
-      src="./assets/images/logo/qomander.svg"
-      alt="qomander"
-    />
+  <div class="qomander-logo-container" routerLink="/welcome">
+    <img class="qomander-logo" src="./assets/images/logo/qomander.svg" alt="qomander" />
   </div>
   <div class="padding"></div>
   <div class="categories-container" #catContainer>
-    <ng-container
-      *ngFor="let cat of mealCategories; index as i; last as last"
-    >
+    <ng-container *ngFor="let cat of mealCategories; index as i; last as last">
       <div
         class="category"
         [class.selected]="cat.name === selectedMealCategory.name"
         (click)="changeMealCategory(i)"
       >
-        <img
-          [src]="cat.picture"
-          alt="{{ cat.name }}"
-          class="category-picture"
-        />
+        <img [src]="cat.picture" alt="{{ cat.name }}" class="category-picture" />
         <p class="category-name">{{ cat.name }}</p>
-        <img
-          src="./assets/images/icons/check.svg"
-          alt="check"
-          class="check-mark"
-        />
+        <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
       </div>
     </ng-container>
   </div>

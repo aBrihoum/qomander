@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { CategoriesComponent } from './components/categories/categories.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { MealListComponent } from './components/meal-list/meal-list.component';
 
-const routes: Routes = [{ path: '', component: MenuComponent }];
+const routes: Routes = [{ path: '', component: MealListComponent }];
 
 @NgModule({
-  declarations: [MenuComponent, CategoriesComponent],
+  declarations: [MealListComponent, CategoriesComponent],
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
 })
 export class MenuModule {}
