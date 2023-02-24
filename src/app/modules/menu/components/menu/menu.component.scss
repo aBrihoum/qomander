@@ -1,13 +1,61 @@
+@import "/src/assets/scss/colors";
 .main-view {
   display: flex;
   height: 100%;
 }
 .menu-container {
   width: 100%;
-  margin-inline: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   .heading {
     margin-top: 140px;
     font-size: 45px;
     font-weight: bold;
   }
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    .item {
+      background-color: $secondary;
+      margin-bottom: 22px;
+      padding: 10px;
+      border-radius: 30px;
+      width: 150px;
+      cursor: pointer;
+      &-picture {
+        max-height: 85px;
+        margin: auto;
+      }
+      &-title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 19px;
+        padding-top: 5px;
+      }
+      &-price {
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: $primary;
+      }
+    }
+  }
+}
+.scroll-shadow {
+  width: calc(100% + 45px);
+  height: 109px;
+  position: absolute;
+  bottom: -25px;
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0%) 0%,
+    rgb(96 96 96 / 70%) 87%
+  );
+  margin-left: -20px;
 }

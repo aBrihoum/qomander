@@ -1,4 +1,4 @@
-enum LangugesE {
+export enum CategoriesE {
   tacos = 'Tacos',
   crepes = 'crepes',
   burgers = 'burgers',
@@ -7,55 +7,55 @@ enum LangugesE {
   chicken = 'chicken',
 }
 
-type FoodCategoriesT = {
-  name: LangugesE;
+type MealCategoriesT = {
+  name: CategoriesE;
   picture: string;
-  category: keyof typeof LangugesE;
+  category: keyof typeof CategoriesE;
 };
 
-export const CATEGORIES: FoodCategoriesT[] = [
+export const CATEGORIES: MealCategoriesT[] = [
   {
-    name: LangugesE.tacos,
+    name: CategoriesE.tacos,
     picture: '/assets/images/categories/tacos.webp',
     category: 'tacos',
   },
   {
-    name: LangugesE.crepes,
+    name: CategoriesE.crepes,
     picture: '/assets/images/categories/crepes.webp',
     category: 'crepes',
   },
   {
-    name: LangugesE.burgers,
+    name: CategoriesE.burgers,
     picture: '/assets/images/categories/burgers.webp',
     category: 'burgers',
   },
   {
-    name: LangugesE.drinks,
+    name: CategoriesE.drinks,
     picture: '/assets/images/categories/drinks.webp',
     category: 'drinks',
   },
   {
-    name: LangugesE.dessert,
+    name: CategoriesE.dessert,
     picture: '/assets/images/categories/dessert.webp',
     category: 'dessert',
   },
   {
-    name: LangugesE.chicken,
+    name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
     category: 'chicken',
   },
   {
-    name: LangugesE.chicken,
+    name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
     category: 'chicken',
   },
   {
-    name: LangugesE.chicken,
+    name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
     category: 'chicken',
   },
   {
-    name: LangugesE.chicken,
+    name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
     category: 'chicken',
   },

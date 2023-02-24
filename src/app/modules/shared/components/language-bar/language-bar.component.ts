@@ -1,4 +1,4 @@
-import { LanguageService } from './../../services/language/services/language.service';
+import { LanguageService } from '../../services/language/language.service';
 import { Component } from '@angular/core';
 
 @Component({

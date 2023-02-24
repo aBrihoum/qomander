@@ -1,5 +1,5 @@
-import { FoodCategoriesService } from './../../../shared/services/food-categories/services/food-categories.service';
 import { Component } from '@angular/core';
+import { MealCategoriesService } from 'src/app/modules/shared/services/meal-categories/meal-categories.service';
 
 @Component({
   selector: 'app-categories',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent {
-  constructor(public FoodCategoriesS: FoodCategoriesService) {}
+  constructor(public mealCategoriesS: MealCategoriesService) {}
 }

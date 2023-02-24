@@ -3,6 +3,7 @@
 :host {
   position: relative;
   display: block;
+  z-index: 99;
 }
 .selected-language {
   position: absolute;

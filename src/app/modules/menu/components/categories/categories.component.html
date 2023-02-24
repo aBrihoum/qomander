@@ -7,9 +7,15 @@
     />
   </div>
   <div class="padding"></div>
-  <div class="categories-container">
-    <ng-container *ngFor="let cat of FoodCategoriesS.foodCategories">
-      <div class="category">
+  <div class="categories-container" #catContainer>
+    <ng-container
+      *ngFor="let cat of mealCategoriesS.categories; index as i; last as last"
+    >
+      <div
+        class="category"
+        [class.selected]="cat.name === mealCategoriesS.selectedCategory.name"
+        (click)="mealCategoriesS.changeCategory(i)"
+      >
         <img
           [src]="cat.picture"
           alt="{{ cat.name }}"

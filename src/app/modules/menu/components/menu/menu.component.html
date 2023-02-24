@@ -3,88 +3,20 @@
   <app-categories></app-categories>
   <section class="menu-container">
     <h1 class="heading">What will you be eating today</h1>
-    <div class="hidden">
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
-      <p>qsd</p>
+    <div class="menu-items" #menuItems>
+      <ng-container *ngFor="let meal of MealListS.list; last as last">
+        <div class="item">
+          <img
+            class="item-picture"
+            [src]="meal.picture"
+            alt="{{ meal.name }}"
+          />
+          <p class="item-title">{{ meal.name }}</p>
+          <p class="item-price">{{ meal.price }} DZD</p>
+        </div>
+        <ng-container>{{ last ? divHaveScrollBar() : null }}</ng-container>
+      </ng-container>
     </div>
+    <div *ngIf="showScrollShadow" class="scroll-shadow"></div>
   </section>
 </section>
