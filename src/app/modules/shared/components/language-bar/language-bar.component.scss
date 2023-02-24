@@ -25,6 +25,7 @@
   position: absolute;
   top: 19px;
   right: 24px;
+  cursor: pointer;
   &.closed {
     animation: scale-out-tr 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }

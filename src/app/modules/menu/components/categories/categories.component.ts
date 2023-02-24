@@ -8,4 +8,7 @@ import { MealCategoriesService } from 'src/app/modules/shared/services/meal-cate
 })
 export class CategoriesComponent {
   constructor(public mealCategoriesS: MealCategoriesService) {}
+  changeCategory(index: number) {
+    this.mealCategoriesS.changeCategory(index);
+  }
 }

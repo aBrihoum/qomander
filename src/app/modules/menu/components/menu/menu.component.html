@@ -4,7 +4,7 @@
   <section class="menu-container">
     <h1 class="heading">What will you be eating today</h1>
     <div class="menu-items" #menuItems>
-      <ng-container *ngFor="let meal of MealListS.list; last as last">
+      <ng-container *ngFor="let meal of MealListS.mealList(); last as last">
         <div class="item">
           <img
             class="item-picture"

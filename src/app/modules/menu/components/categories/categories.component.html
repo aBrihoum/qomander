@@ -14,7 +14,7 @@
       <div
         class="category"
         [class.selected]="cat.name === mealCategoriesS.selectedCategory.name"
-        (click)="mealCategoriesS.changeCategory(i)"
+        (click)="changeCategory(i)"
       >
         <img
           [src]="cat.picture"

@@ -10,53 +10,53 @@ export enum CategoriesE {
 type MealCategoriesT = {
   name: CategoriesE;
   picture: string;
-  category: keyof typeof CategoriesE;
+  key: keyof typeof CategoriesE;
 };
 
 export const CATEGORIES: MealCategoriesT[] = [
   {
     name: CategoriesE.tacos,
     picture: '/assets/images/categories/tacos.webp',
-    category: 'tacos',
+    key: 'tacos',
   },
   {
     name: CategoriesE.crepes,
     picture: '/assets/images/categories/crepes.webp',
-    category: 'crepes',
+    key: 'crepes',
   },
   {
     name: CategoriesE.burgers,
     picture: '/assets/images/categories/burgers.webp',
-    category: 'burgers',
+    key: 'burgers',
   },
   {
     name: CategoriesE.drinks,
     picture: '/assets/images/categories/drinks.webp',
-    category: 'drinks',
+    key: 'drinks',
   },
   {
     name: CategoriesE.dessert,
     picture: '/assets/images/categories/dessert.webp',
-    category: 'dessert',
+    key: 'dessert',
   },
   {
     name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
-    category: 'chicken',
+    key: 'chicken',
   },
   {
     name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
-    category: 'chicken',
+    key: 'chicken',
   },
   {
     name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
-    category: 'chicken',
+    key: 'chicken',
   },
   {
     name: CategoriesE.chicken,
     picture: '/assets/images/categories/chicken.webp',
-    category: 'chicken',
+    key: 'chicken',
   },
 ];

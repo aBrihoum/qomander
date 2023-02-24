@@ -8,7 +8,7 @@ export class MealCategoriesService {
   constructor() {}
 
   categories = CATEGORIES;
-  selectedCategory = this.categories[1];
+  selectedCategory = this.categories[0];
 
   changeCategory(index: number) {
     this.selectedCategory = this.categories[index];
