@@ -1,0 +1,34 @@
+<app-language-bar></app-language-bar>
+<main>
+  <button class="back-button">
+    <img src="./assets/images/icons/back.svg" alt="back btn" />
+    <span>Back</span>
+  </button>
+  <div class="margin"></div>
+  <div class="meal-details-container">
+    <div class="meal-picture">
+      <img src="./assets/images/meals/tacos/tacos-double.webp" alt="tacos" />
+    </div>
+    <div class="meal-name">
+      <p>Tacos maxi</p>
+      <p class="meal-price">250 DZD</p>
+    </div>
+    <div class="quantity-buttons-container">
+      <button class="quantity-button">-</button>
+      <span class="quantity">1</span>
+      <button class="quantity-button">+</button>
+    </div>
+  </div>
+  <h1 class="heading">Select the meat type:</h1>
+  <p>You can select only 1 type</p>
+  <div class="options-container" #mealOptions>
+    <div class="option">
+      <img class="option-picture" src="./assets/images/options/meat/marguez.webp" alt="sauce" />
+      <p class="option-title">Marguez</p>
+      <p class="option-price">+ 50 DZD</p>
+      <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
+    </div>
+  </div>
+  <button class="next-button">Next</button>
+  <div *ngIf="showScrollShadow" class="scroll-shadow"></div>
+</main>

@@ -7,13 +7,16 @@ const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   {
     path: 'welcome',
-    loadChildren: () =>
-      import('./modules/home/home.module').then((m) => m.HomeModule),
+    loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'menu',
+    loadChildren: () => import('./modules/menu/menu.module').then((m) => m.MenuModule),
+  },
+  {
+    path: 'options',
     loadChildren: () =>
-      import('./modules/menu/menu.module').then((m) => m.MenuModule),
+      import('./modules/meal-options/meal-options.module').then((m) => m.MealOptionsModule),
   },
 ];
 @NgModule({

@@ -1,0 +1,136 @@
+@import "/src/assets/scss/colors";
+main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .back-button {
+    background-color: $secondary;
+    font-weight: 600;
+    padding: 13px 30px 13px 20px;
+    border-radius: 18px;
+    margin-top: 18px;
+    align-self: flex-start;
+    img {
+      width: 25px;
+      display: inline-block;
+      top: -2px;
+      position: relative;
+    }
+  }
+  .margin {
+    margin-top: 32px;
+  }
+
+  .meal-details-container {
+    padding: 15px;
+    background-color: $secondary;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .meal-picture {
+      img {
+        max-height: 90px;
+        height: 100%;
+        width: auto;
+      }
+    }
+    .meal-name {
+      font-weight: 600;
+      margin-left: 30px;
+      font-size: 27px;
+      p.meal-price {
+        font-size: 22px;
+        color: $primary;
+      }
+    }
+  }
+  .quantity-buttons-container {
+    margin-left: auto;
+    .quantity-button {
+      color: black;
+      font-weight: bold;
+      background-color: white;
+      width: 44px;
+      border-radius: 11px;
+      padding: 2px 0;
+    }
+    .quantity {
+      font-weight: 600;
+      margin-inline: 30px;
+    }
+  }
+  .heading {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 48px;
+  }
+  .options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    overflow-y: auto;
+    padding-top: 11px;
+    padding-inline: 9px;
+    padding-bottom: 100px;
+    .option {
+      background-color: $secondary;
+      margin-bottom: 22px;
+      padding: 10px;
+      border-radius: 30px;
+      width: 140px;
+      position: relative;
+      cursor: pointer;
+      &-picture {
+        max-height: 85px;
+        margin: auto;
+      }
+      &-title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 19px;
+        padding-top: 5px;
+      }
+      &-price {
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: $primary;
+      }
+      &.selected {
+        outline: 2.5px solid $primary;
+        position: relative;
+        img.check-mark {
+          visibility: visible !important;
+        }
+      }
+      img.check-mark {
+        width: 30px;
+        position: absolute;
+        top: -11px;
+        right: -9px;
+        visibility: hidden;
+      }
+    }
+  }
+  .next-button {
+    background-color: $primary;
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 70px;
+    border-radius: 11px;
+    font-weight: 600;
+    z-index: 9;
+  }
+}
+.scroll-shadow {
+  width: calc(100% + 45px);
+  height: 93px;
+  position: absolute;
+  bottom: 27px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 75%);
+  margin-left: -20px;
+}
