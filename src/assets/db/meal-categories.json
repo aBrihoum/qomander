@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tacos",
+    "picture": "/assets/images/categories/tacos.webp",
+    "key": "tacos"
+  },
+  {
+    "name": "Crepes",
+    "picture": "/assets/images/categories/crepes.webp",
+    "key": "crepes"
+  },
+  {
+    "name": "Burgers",
+    "picture": "/assets/images/categories/burgers.webp",
+    "key": "burgers"
+  },
+  {
+    "name": "Drinks",
+    "picture": "/assets/images/categories/drinks.webp",
+    "key": "drinks"
+  },
+  {
+    "name": "Dessert",
+    "picture": "/assets/images/categories/dessert.webp",
+    "key": "dessert"
+  },
+  {
+    "name": "Chicken",
+    "picture": "/assets/images/categories/chicken.webp",
+    "key": "chicken"
+  }
+]

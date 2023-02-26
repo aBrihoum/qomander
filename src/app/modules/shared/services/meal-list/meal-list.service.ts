@@ -1,19 +1,18 @@
 import { MealCategoriesService } from './../meal-categories/meal-categories.service';
 import { Injectable } from '@angular/core';
-import { MEALLIST } from './meal-list.model';
+import MEALLIST_JSON from '../../../../../assets/db/meal-list.json';
+import { MealListT } from './meal-list.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MealListService {
-  constructor(private MealCategories$: MealCategoriesService) {}
+  constructor(private MealCategoriesService: MealCategoriesService) {}
 
-  // ~~ ~~ ~~
-  private readonly mealList = MEALLIST;
-  // ~~ ~~ ~~
+  private readonly mealList: MealListT[] = MEALLIST_JSON as MealListT[];
 
   returnMealList() {
-    const selectedCategoryKey = this.MealCategories$.selectedMealCategory.key;
+    const selectedCategoryKey = this.MealCategoriesService.selectedMealCategory.key;
     return this.mealList.filter((meal) => meal.categoryKey === selectedCategoryKey);
   }
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Cordon blue",
+    "picture": "/assets/images/options/meat/cordon-blue.webp",
+    "price": 20
+  },
+  {
+    "name": "Escalope",
+    "picture": "/assets/images/options/meat/escalope.webp",
+    "price": 0
+  },
+  {
+    "name": "Kebab",
+    "picture": "/assets/images/options/meat/kebab.webp",
+    "price": 0
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Viande hachée",
+    "picture": "/assets/images/options/meat/viande-hachée.webp",
+    "price": 50
+  }
+]

@@ -7,8 +7,10 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class MealOptionsComponent {
   constructor() {}
+
   @ViewChild('mealOptions') mealOptionsRef?: ElementRef<HTMLDivElement>;
   showScrollShadow = true;
+
   divHaveScrollBar() {
     /* 
     check if the mealOptions container has a scrollbar,

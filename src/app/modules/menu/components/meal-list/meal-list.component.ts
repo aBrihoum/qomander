@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, Input } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { MealListT } from 'src/app/modules/shared/services/meal-list/meal-list.model';
 import { MealListService } from '../../../shared/services/meal-list/meal-list.service';
 
@@ -8,16 +8,14 @@ import { MealListService } from '../../../shared/services/meal-list/meal-list.se
   styleUrls: ['./meal-list.component.scss'],
 })
 export class MealListComponent {
-  constructor(private MealList$: MealListService) {}
+  constructor(private MealListService: MealListService) {}
 
-  // ~~ ~~ ~~
-  mealList: MealListT[] = this.MealList$.returnMealList();
+  mealList: MealListT[] = this.MealListService.returnMealList();
   @ViewChild('menuItems') menuItemsRef?: ElementRef<HTMLDivElement>;
   showScrollShadow = false;
-  // ~~ ~~ ~~
 
   refreshMealList() {
-    this.mealList = this.MealList$.returnMealList();
+    this.mealList = this.MealListService.returnMealList();
   }
 
   divHaveScrollBar() {

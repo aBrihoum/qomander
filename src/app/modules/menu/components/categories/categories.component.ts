@@ -8,21 +8,19 @@ import { MealCategoriesService } from 'src/app/modules/shared/services/meal-cate
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent {
-  constructor(private MealCategories$: MealCategoriesService) {}
+  constructor(private MealCategoriesService: MealCategoriesService) {}
 
-  // ~~ ~~ ~~
-  mealCategories: MealCategoriesT[] = this.MealCategories$.mealCategories;
-  selectedMealCategory: MealCategoriesT = this.MealCategories$.selectedMealCategory;
+  mealCategories: MealCategoriesT[] = this.MealCategoriesService.returnMealCategories();
+  selectedMealCategory: MealCategoriesT = this.MealCategoriesService.selectedMealCategory;
   @Output() categoryChangedEvent = new EventEmitter<boolean>();
-  // ~~ ~~ ~~
 
   changeMealCategory(index: number) {
-    this.MealCategories$.changeMealCategory(index);
+    this.MealCategoriesService.changeMealCategory(index);
     this.refresh();
   }
 
   refresh() {
-    this.selectedMealCategory = this.MealCategories$.selectedMealCategory;
+    this.selectedMealCategory = this.MealCategoriesService.selectedMealCategory;
     this.categoryChangedEvent.emit(true);
   }
 }
