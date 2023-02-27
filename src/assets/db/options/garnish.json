@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Camembert",
+    "picture": "/assets/images/options/garnish/camembert.webp",
+    "price": 20,
+    "selected": false
+  },
+  {
+    "name": "Lettuce",
+    "picture": "/assets/images/options/garnish/lettuce.webp",
+    "price": 0
+  },
+  {
+    "name": "Oeuf",
+    "picture": "/assets/images/options/garnish/oeuf.webp",
+    "price": 10
+  },
+  {
+    "name": "Poivron",
+    "picture": "/assets/images/options/garnish/poivron.webp",
+    "price": 0
+  },
+  {
+    "name": "Tomate",
+    "picture": "/assets/images/options/garnish/tomate.webp",
+    "price": 0
+  },
+  {
+    "name": "Tranche de gruyére",
+    "picture": "/assets/images/options/garnish/tranche-de-gruyére.webp",
+    "price": 30
+  }
+]

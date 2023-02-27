@@ -1,0 +1,32 @@
+[
+  {
+    "name": "mayonnaise",
+    "picture": "/assets/images/options/sauce/mayo.webp",
+    "price": 0
+  },
+  {
+    "name": "Ketchup",
+    "picture": "/assets/images/options/sauce/ketchup.webp",
+    "price": 0
+  },
+  {
+    "name": "Moutarde",
+    "picture": "/assets/images/options/sauce/moutarde.webp",
+    "price": 0
+  },
+  {
+    "name": "Barbecue",
+    "picture": "/assets/images/options/sauce/bbk.webp",
+    "price": 10
+  },
+  {
+    "name": "Andalouse",
+    "picture": "/assets/images/options/sauce/andalouse.webp",
+    "price": 10
+  },
+  {
+    "name": "Tartare",
+    "picture": "/assets/images/options/sauce/tartare.webp",
+    "price": 15
+  }
+]

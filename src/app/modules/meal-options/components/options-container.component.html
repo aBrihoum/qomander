@@ -19,16 +19,9 @@
       <button class="quantity-button">+</button>
     </div>
   </div>
-  <h1 class="heading">Select the meat type:</h1>
-  <p>You can select only 1 type</p>
-  <div class="options-container" #mealOptions>
-    <div class="option">
-      <img class="option-picture" src="./assets/images/options/meat/marguez.webp" alt="sauce" />
-      <p class="option-title">Marguez</p>
-      <p class="option-price">+ 50 DZD</p>
-      <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
-    </div>
-  </div>
-  <button class="next-button">Next</button>
-  <div *ngIf="showScrollShadow" class="scroll-shadow"></div>
+  <!-- <app-options [optionType]="'meat'" [optionMaxNumber]="1"></app-options> -->
+  <!-- <router-outlet></router-outlet> -->
+  <app-options></app-options>
+  <!-- <button class="next-button">Next</button>
+  <div class="scroll-shadow"></div> -->
 </main>
