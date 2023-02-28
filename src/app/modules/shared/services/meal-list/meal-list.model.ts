@@ -5,5 +5,4 @@ export type MealListT = {
   categoryKey: keyof typeof CategoriesE;
   picture: string;
   price: number;
-  suitableExtras: string[];
 };

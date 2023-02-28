@@ -8,12 +8,17 @@ export class MealCategoriesService {
   constructor() {}
 
   private readonly mealCategories: MealCategoriesT[] = MEALCATEGORIES_JSON as MealCategoriesT[];
-  selectedMealCategory = this.mealCategories[0];
+  private selectedMealCategory = this.mealCategories[0];
 
   changeMealCategory(index: number) {
     this.selectedMealCategory = this.mealCategories[index];
   }
-  returnMealCategories() {
+
+  returnMealCategories(): MealCategoriesT[] {
     return this.mealCategories;
+  }
+
+  returnSelectedMealCategory(): MealCategoriesT {
+    return this.selectedMealCategory;
   }
 }

@@ -10,9 +10,9 @@ import { MealCategoriesService } from 'src/app/modules/shared/services/meal-cate
 export class CategoriesComponent {
   constructor(private MealCategoriesService: MealCategoriesService) {}
 
-  mealCategories: MealCategoriesT[] = this.MealCategoriesService.returnMealCategories();
-  selectedMealCategory: MealCategoriesT = this.MealCategoriesService.selectedMealCategory;
   @Output() categoryChangedEvent = new EventEmitter<boolean>();
+  mealCategories: MealCategoriesT[] = this.MealCategoriesService.returnMealCategories();
+  selectedMealCategory: MealCategoriesT = this.MealCategoriesService.returnSelectedMealCategory();
 
   changeMealCategory(index: number) {
     this.MealCategoriesService.changeMealCategory(index);
@@ -20,7 +20,7 @@ export class CategoriesComponent {
   }
 
   refresh() {
-    this.selectedMealCategory = this.MealCategoriesService.selectedMealCategory;
+    this.selectedMealCategory = this.MealCategoriesService.returnSelectedMealCategory();
     this.categoryChangedEvent.emit(true);
   }
 }

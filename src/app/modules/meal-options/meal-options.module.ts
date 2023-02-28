@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { MealOptionsComponent } from './components/options-container.component';
 import { SharedModule } from '../shared/shared.module';
-import { MeatOptionsComponent } from './components/options/options.component';
+import { MeatOptionsComponent } from './components/options-list/options.component';
 
 const routes: Routes = [
   {

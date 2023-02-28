@@ -4,19 +4,14 @@
   <section class="menu-container">
     <h1 class="heading">What will you be eating today</h1>
     <div class="menu-items" #menuItems>
-      <ng-container *ngFor="let meal of mealList; last as last">
-        <div class="item">
-          <img
-            class="item-picture"
-            [src]="meal.picture"
-            alt="{{ meal.name }}"
-          />
+      <ng-container *ngFor="let meal of mealList">
+        <div class="item" (click)="selectMeal(meal)" routerLink="/options">
+          <img class="item-picture" [src]="meal.picture" alt="{{ meal.name }}" />
           <p class="item-title">{{ meal.name }}</p>
           <p class="item-price">{{ meal.price }} DZD</p>
         </div>
-        <ng-container>{{ last ? divHaveScrollBar() : null }}</ng-container>
       </ng-container>
     </div>
-    <div *ngIf="showScrollShadow" class="scroll-shadow"></div>
+    <div class="scroll-shadow"></div>
   </section>
 </section>

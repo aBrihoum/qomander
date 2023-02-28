@@ -18,6 +18,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/meal-options/meal-options.module').then((m) => m.MealOptionsModule),
   },
+  {
+    path: 'order-detail',
+    loadChildren: () =>
+      import('./modules/order-detail/order-detail.module').then((m) => m.OrderDetailModule),
+  },
 ];
 @NgModule({
   declarations: [AppComponent],

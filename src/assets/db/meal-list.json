@@ -3,133 +3,24 @@
     "name": "Tacos double",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-double.webp",
-    "price": 400,
-    "suitableExtras": []
+    "price": 400
   },
   {
     "name": "Tacos special",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-supreme.webp",
-    "price": 250,
-    "suitableExtras": []
+    "price": 250
   },
   {
     "name": "Tacos simple",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-simple.webp",
-    "price": 200,
-    "suitableExtras": []
+    "price": 200
   },
   {
     "name": "Tacos maxi",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
-  },
-  {
-    "name": "Tacos maxi",
-    "categoryKey": "tacos",
-    "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
-    "price": 300,
-    "suitableExtras": []
+    "price": 300
   }
 ]

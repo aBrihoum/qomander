@@ -12,7 +12,7 @@ export class MealListService {
   private readonly mealList: MealListT[] = MEALLIST_JSON as MealListT[];
 
   returnMealList() {
-    const selectedCategoryKey = this.MealCategoriesService.selectedMealCategory.key;
+    const selectedCategoryKey = this.MealCategoriesService.returnSelectedMealCategory().key;
     return this.mealList.filter((meal) => meal.categoryKey === selectedCategoryKey);
   }
 }

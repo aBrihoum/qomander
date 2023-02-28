@@ -1,5 +1,6 @@
-import { MealOptionsService } from './../../../shared/services/meal-options/meal-options.service';
+import { MealOptionsService } from '../../../shared/services/meal-options/meal-options.service';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { MealOptionsT } from 'src/app/modules/shared/services/meal-options/meal-options.model';
 @Component({
   selector: 'app-options',
@@ -7,7 +8,9 @@ import { MealOptionsT } from 'src/app/modules/shared/services/meal-options/meal-
   styleUrls: ['./options.component.scss'],
 })
 export class MeatOptionsComponent {
-  constructor(private MealOptionsService: MealOptionsService) {}
+  constructor(private MealOptionsService: MealOptionsService, private router: Router) {}
+
+  @Output() updateSelectedOptionsEvent = new EventEmitter<boolean>();
 
   currentStepIndex = 0;
   steps = [
@@ -33,8 +36,6 @@ export class MeatOptionsComponent {
       selectedOptions: [] as MealOptionsT[],
     },
   ];
-  @Output() selectedOptionsEvent = new EventEmitter<MealOptionsT[]>();
-  selectedOptions: MealOptionsT[] = [];
 
   addOption(option: MealOptionsT) {
     let stepSelectedOptions = this.steps[this.currentStepIndex].selectedOptions;
@@ -74,12 +75,18 @@ export class MeatOptionsComponent {
     });
   }
 
+  updateSelectedMealOptions(option: MealOptionsT[]) {
+    this.MealOptionsService.updateSelectedMealOptions(option);
+    this.updateSelectedOptionsEvent.emit(true);
+  }
+
   nextButton() {
     let stepSelectedOptions = this.steps[this.currentStepIndex].selectedOptions;
-    this.selectedOptions = [...this.selectedOptions, ...stepSelectedOptions];
-    this.selectedOptionsEvent.emit(this.selectedOptions);
+    this.updateSelectedMealOptions(stepSelectedOptions);
     if (this.steps.length - 1 > this.currentStepIndex) {
       ++this.currentStepIndex;
+    } else {
+      // this.router.navigate(['/order-detail']);
     }
   }
 }

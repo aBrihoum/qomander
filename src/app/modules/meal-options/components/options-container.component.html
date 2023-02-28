@@ -7,21 +7,21 @@
   <div class="margin"></div>
   <div class="meal-details-container">
     <div class="meal-picture">
-      <img src="./assets/images/meals/tacos/tacos-double.webp" alt="tacos" />
+      <img [src]="selectedMeal.picture" alt="{{ selectedMeal.name }}" />
     </div>
     <div class="meal-name">
-      <p>Tacos maxi</p>
-      <p class="meal-price">250 DZD</p>
+      <p>{{ selectedMeal.name }}</p>
+      <p class="meal-price">{{ selectedMeal.price }} DZD</p>
     </div>
     <div class="quantity-buttons-container">
-      <button class="quantity-button">-</button>
-      <span class="quantity">1</span>
-      <button class="quantity-button">+</button>
+      <button class="quantity-button" (click)="changeSelectedMealQuantity('-')">-</button>
+      <span class="quantity">{{ selectedMealQuantity }}</span>
+      <button class="quantity-button" (click)="changeSelectedMealQuantity('+')">+</button>
     </div>
   </div>
   <div class="selected-options" *ngIf="selectedOptions.length">
     <p class="selected-options-heading">
-      Selected options <span>+{{ totalPrice }} DZD</span>
+      Selected options <span>+{{ optionsTotalPrice }} DZD</span>
     </p>
     <div class="selected-options-container">
       <div class="option" *ngFor="let option of selectedOptions">
@@ -30,5 +30,5 @@
       </div>
     </div>
   </div>
-  <app-options (selectedOptionsEvent)="updateSelectedOptions($event)"></app-options>
+  <app-options (updateSelectedOptionsEvent)="refreshVars()"></app-options>
 </main>
