@@ -1,5 +1,7 @@
 <h1 class="heading">{{ steps[currentStepIndex].heading }}</h1>
-<p class="sub-heading">You can select only {{ steps[currentStepIndex].canSelect }} type</p>
+<p class="sub-heading" *ngIf="steps[currentStepIndex].canSelect">
+  You can select only {{ steps[currentStepIndex].canSelect }} type
+</p>
 <div class="options-container" #mealOptions>
   <div
     class="option"

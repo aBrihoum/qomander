@@ -35,39 +35,39 @@ export class MeatOptionsComponent {
   ];
 
   addOption(option: MealOptionsT) {
-    let selectedOptions = this.steps[this.currentStepIndex].selectedOptions;
-    let indexOfOption = selectedOptions.indexOf(option);
+    let stepSelectedOptions = this.steps[this.currentStepIndex].selectedOptions;
+    let indexOfOption = stepSelectedOptions.indexOf(option);
     if (this.steps[this.currentStepIndex].canSelect === 1) {
-      selectedOptions = [option];
+      stepSelectedOptions = [option];
     } else {
       if (indexOfOption === -1) {
         //* if not selected, add it to selectedOptions array
         if (this.steps[this.currentStepIndex].canSelect === 0) {
           //* if canSelect = 0, means add as much as you want
-          selectedOptions = [...selectedOptions, option];
+          stepSelectedOptions = [...stepSelectedOptions, option];
         } else {
           //* if canSelect = 2, you only can add 2
-          if (selectedOptions.length < this.steps[this.currentStepIndex].canSelect) {
-            selectedOptions = [...selectedOptions, option];
+          if (stepSelectedOptions.length < this.steps[this.currentStepIndex].canSelect) {
+            stepSelectedOptions = [...stepSelectedOptions, option];
           } else {
             //* if the user selected more than `canSelect`, we remove the first item to add what the user newly selected
-            selectedOptions = [...selectedOptions.slice(1), option];
+            stepSelectedOptions = [...stepSelectedOptions.slice(1), option];
           }
         }
       } else {
         //* if selected and clicked again, remove it from selectedOptions array
-        selectedOptions.splice(indexOfOption, 1);
+        stepSelectedOptions.splice(indexOfOption, 1);
       }
     }
-    this.steps[this.currentStepIndex].selectedOptions = selectedOptions;
+    this.steps[this.currentStepIndex].selectedOptions = stepSelectedOptions;
     this.isOptionSelected();
-    console.log(selectedOptions);
+    console.log(stepSelectedOptions);
   }
 
   isOptionSelected() {
-    let selectedOptions = this.steps[this.currentStepIndex].selectedOptions;
+    let stepSelectedOptions = this.steps[this.currentStepIndex].selectedOptions;
     this.steps[this.currentStepIndex].data.forEach((originalEl) => {
-      selectedOptions.includes(originalEl)
+      stepSelectedOptions.includes(originalEl)
         ? (originalEl.selected = true)
         : (originalEl.selected = false);
     });

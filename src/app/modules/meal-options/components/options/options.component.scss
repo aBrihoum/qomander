@@ -2,15 +2,16 @@
 :host {
   display: flex;
   flex-direction: column;
-  height: 806px;
+  overflow-y: auto;
+  // height: 806px;
 }
 .heading {
   margin-top: 20px;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 40px;
 }
 .sub-heading {
-  font-size: 25px;
+  font-size: 22px;
 }
 .options-container {
   display: flex;
@@ -20,7 +21,7 @@
   overflow-y: auto;
   padding-top: 11px;
   padding-inline: 9px;
-  padding-bottom: 118px;
+  padding-bottom: 100px;
   // &::after {
   //   content: "";
   //   flex: auto;

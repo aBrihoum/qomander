@@ -15,13 +15,98 @@
     "price": 0
   },
   {
+    "name": "Viande hachée",
+    "picture": "/assets/images/options/meat/viande-hachée.webp",
+    "price": 50
+  },
+  {
     "name": "Marguez",
     "picture": "/assets/images/options/meat/marguez.webp",
     "price": 30
   },
   {
-    "name": "Viande hachée",
-    "picture": "/assets/images/options/meat/viande-hachée.webp",
-    "price": 50
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
+  },
+  {
+    "name": "Marguez",
+    "picture": "/assets/images/options/meat/marguez.webp",
+    "price": 30
   }
 ]
