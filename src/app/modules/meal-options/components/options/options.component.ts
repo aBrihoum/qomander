@@ -1,5 +1,5 @@
 import { MealOptionsService } from './../../../shared/services/meal-options/meal-options.service';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MealOptionsT } from 'src/app/modules/shared/services/meal-options/meal-options.model';
 @Component({
   selector: 'app-options',
@@ -33,6 +33,8 @@ export class MeatOptionsComponent {
       selectedOptions: [] as MealOptionsT[],
     },
   ];
+  @Output() selectedOptionsEvent = new EventEmitter<MealOptionsT[]>();
+  selectedOptions: MealOptionsT[] = [];
 
   addOption(option: MealOptionsT) {
     let stepSelectedOptions = this.steps[this.currentStepIndex].selectedOptions;
@@ -61,7 +63,6 @@ export class MeatOptionsComponent {
     }
     this.steps[this.currentStepIndex].selectedOptions = stepSelectedOptions;
     this.isOptionSelected();
-    console.log(stepSelectedOptions);
   }
 
   isOptionSelected() {
@@ -74,9 +75,11 @@ export class MeatOptionsComponent {
   }
 
   nextButton() {
-    this.steps.length - 1 > this.currentStepIndex
-      ? ++this.currentStepIndex
-      : console.log(this.steps);
-    // this.selectedOptions = [];
+    let stepSelectedOptions = this.steps[this.currentStepIndex].selectedOptions;
+    this.selectedOptions = [...this.selectedOptions, ...stepSelectedOptions];
+    this.selectedOptionsEvent.emit(this.selectedOptions);
+    if (this.steps.length - 1 > this.currentStepIndex) {
+      ++this.currentStepIndex;
+    }
   }
 }

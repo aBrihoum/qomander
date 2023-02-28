@@ -10,7 +10,15 @@ import { MealOptionsT } from '../../shared/services/meal-options/meal-options.mo
 export class MealOptionsComponent {
   constructor(private MealOptionsService: MealOptionsService) {}
 
-  meatOptions: MealOptionsT[] = this.MealOptionsService.returnMeatOptions();
-  sauceOptions: MealOptionsT[] = this.MealOptionsService.returnSauceOptions();
-  garnishOptions: MealOptionsT[] = this.MealOptionsService.returnGarnishOptions();
+  // meatOptions: MealOptionsT[] = this.MealOptionsService.returnMeatOptions();
+  // sauceOptions: MealOptionsT[] = this.MealOptionsService.returnSauceOptions();
+  // garnishOptions: MealOptionsT[] = this.MealOptionsService.returnGarnishOptions();
+  selectedOptions: MealOptionsT[] = [];
+  totalPrice = 0;
+  updateSelectedOptions(options: MealOptionsT[]) {
+    this.selectedOptions = [...options];
+    this.totalPrice = 0;
+    this.selectedOptions.forEach((el) => (this.totalPrice += el.price));
+    console.log(this.selectedOptions);
+  }
 }

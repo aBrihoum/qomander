@@ -19,79 +19,16 @@
       <button class="quantity-button">+</button>
     </div>
   </div>
-  <div class="selected-options">
-    <p class="selected-options-heading">Selected options <span>+50 DZD</span></p>
-
+  <div class="selected-options" *ngIf="selectedOptions.length">
+    <p class="selected-options-heading">
+      Selected options <span>+{{ totalPrice }} DZD</span>
+    </p>
     <div class="selected-options-container">
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Marguez</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
-      </div>
-      <div class="option">
-        <img src="./assets/images/options/meat/escalope.webp" alt="tacos" />
-        <p>Escalope</p>
+      <div class="option" *ngFor="let option of selectedOptions">
+        <img [src]="option.picture" alt="{{ option.name }}" />
+        <p>{{ option.name }}</p>
       </div>
     </div>
   </div>
-  <app-options></app-options>
+  <app-options (selectedOptionsEvent)="updateSelectedOptions($event)"></app-options>
 </main>
