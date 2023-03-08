@@ -3,11 +3,11 @@ import { MealCategoriesT } from 'src/app/modules/shared/services/meal-categories
 import { MealCategoriesService } from 'src/app/modules/shared/services/meal-categories/meal-categories.service';
 
 @Component({
-  selector: 'app-categories',
+  selector: 'app-meal-categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.scss'],
 })
-export class CategoriesComponent {
+export class MealCategoriesComponent {
   constructor(private MealCategoriesService: MealCategoriesService) {}
 
   @Output() categoryChangedEvent = new EventEmitter<boolean>();

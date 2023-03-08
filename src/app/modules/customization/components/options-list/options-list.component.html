@@ -6,8 +6,8 @@
   <div
     class="option"
     [class.selected]="option.selected"
-    *ngFor="let option of steps[currentStepIndex].data"
-    (click)="addOption(option)"
+    *ngFor="let option of steps[currentStepIndex].options"
+    (click)="optionClicked(option)"
   >
     <img class="option-picture" [src]="option.picture" alt="{{ option.name }}" />
     <p class="option-title">{{ option.name }}</p>
@@ -15,5 +15,11 @@
     <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
   </div>
 </div>
-<button class="next-button" (click)="nextButton()">Next</button>
+<button
+  class="next-button"
+  [disabled]="!selectedStep.selectedOptions.length"
+  (click)="nextButton()"
+>
+  Next
+</button>
 <div class="scroll-shadow"></div>

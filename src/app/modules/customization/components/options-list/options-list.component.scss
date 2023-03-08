@@ -80,6 +80,10 @@
   border-radius: 11px;
   font-weight: 600;
   z-index: 9;
+  &:disabled {
+    background-color: $grey;
+    cursor: not-allowed;
+  }
 }
 .scroll-shadow {
   width: calc(100% + 45px);

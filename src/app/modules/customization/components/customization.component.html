@@ -1,6 +1,6 @@
 <app-language-bar></app-language-bar>
 <main>
-  <button class="back-button">
+  <button class="back-button" (click)="backButton()">
     <img src="./assets/images/icons/back.svg" alt="back btn" />
     <span>Back</span>
   </button>
@@ -30,5 +30,5 @@
       </div>
     </div>
   </div>
-  <app-options (updateSelectedOptionsEvent)="refreshVars()"></app-options>
+  <app-meal-options-list (updateSelectedOptionsEvent)="refreshVars()"></app-meal-options-list>
 </main>

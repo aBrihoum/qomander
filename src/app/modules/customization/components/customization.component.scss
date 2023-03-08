@@ -52,6 +52,8 @@ main {
 }
 .quantity-buttons-container {
   margin-left: auto;
+  display: flex;
+  align-items: center;
   .quantity-button {
     color: black;
     font-weight: bold;
@@ -62,8 +64,8 @@ main {
   }
   .quantity {
     font-weight: 600;
-    margin-inline: 20px;
-    padding-inline: 10px;
+    width: 60px;
+    text-align: center;
   }
 }
 .selected-options {

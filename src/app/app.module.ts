@@ -16,12 +16,7 @@ const routes: Routes = [
   {
     path: 'options',
     loadChildren: () =>
-      import('./modules/meal-options/meal-options.module').then((m) => m.MealOptionsModule),
-  },
-  {
-    path: 'order-detail',
-    loadChildren: () =>
-      import('./modules/order-detail/order-detail.module').then((m) => m.OrderDetailModule),
+      import('./modules/customization/customization.module').then((m) => m.CustomizationModule),
   },
 ];
 @NgModule({

@@ -4,3 +4,11 @@ export type MealOptionsT = {
   price: number;
   selected?: boolean;
 };
+
+export type StepsT = {
+  name: string;
+  heading: string;
+  canSelect: number;
+  options: MealOptionsT[];
+  selectedOptions: MealOptionsT[];
+};
