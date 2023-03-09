@@ -36,7 +36,7 @@
       Are you sure you don't <br />
       want to add a drink ?
     </h2>
-    <div class="heading__drink">
+    <div class="heading__drink" (click)="notif()">
       <img class="heading__drink__image" src="./assets/images/categories/drinks.webp" alt="drink" />
       <div>
         <p class="heading__drink__title">Coca Cola</p>
@@ -52,7 +52,7 @@
     </h2>
     <div class="footer__buttons">
       <button class="white" (click)="reset()">Finish</button>
-      <button class="orange">Select more</button>
+      <button class="orange" (click)="notif()">Select more</button>
     </div>
   </div>
 </main>

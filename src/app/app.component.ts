@@ -21,4 +21,15 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class AppComponent {}
+export class AppComponent {
+  ngAfterContentInit() {
+    // lazy loading `Notyf` styles
+    window.onload = () => {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'notyf.css';
+      document.head.appendChild(link);
+    };
+  }
+}

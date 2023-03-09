@@ -1,3 +1,4 @@
+import { NotoficationService } from './../../services/notification/notofication.service';
 import { LanguageService } from '../../services/language/language.service';
 import { Component } from '@angular/core';
 
@@ -7,14 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./language-bar.component.scss'],
 })
 export class LanguageBarComponent {
-  constructor(public LanguageS: LanguageService) {}
+  constructor(
+    public LanguageService: LanguageService,
+    private NotoficationService: NotoficationService
+  ) {}
   isLanguageList = false;
 
   toggleLangugeList() {
     this.isLanguageList = !this.isLanguageList;
   }
   changeLanguage(id: number) {
-    this.LanguageS.changeLanguge(id);
+    this.LanguageService.changeLanguge(id);
     this.toggleLangugeList();
+    this.NotoficationService.trigger();
   }
 }

@@ -1,3 +1,4 @@
+import { NotoficationService } from './../../shared/services/notification/notofication.service';
 import { Router } from '@angular/router';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { MealListT } from '../../shared/services/meal-list/meal-list.model';
@@ -9,7 +10,11 @@ import { MealOptionsService } from '../../shared/services/meal-options/meal-opti
   styleUrls: ['./final.component.scss'],
 })
 export class FinalComponent {
-  constructor(private MealOptionsService: MealOptionsService, private route: Router) {}
+  constructor(
+    private MealOptionsService: MealOptionsService,
+    private NotoficationService: NotoficationService,
+    private route: Router
+  ) {}
 
   readonly selectedMeal: MealListT = this.MealOptionsService.returnSelectedMeal();
   selectedOptions: MealOptionsT[] = this.MealOptionsService.returnSelectedMealOptions();
@@ -24,6 +29,10 @@ export class FinalComponent {
   scrollEvent($event: WheelEvent) {
     let el = this.optionsContainer.nativeElement;
     el.scrollLeft += $event.deltaY < 0 ? -100 : 100;
+  }
+
+  notif() {
+    this.NotoficationService.trigger();
   }
 
   ngOnInit() {

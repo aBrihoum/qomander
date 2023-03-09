@@ -1,23 +1,19 @@
 <div class="selected-language" (click)="toggleLangugeList()">
   <img
     class="selected-language-picture"
-    [src]="LanguageS.selectedLanguge.picture"
-    alt="{{ LanguageS.selectedLanguge.name }}"
+    [src]="LanguageService.selectedLanguge.picture"
+    alt="{{ LanguageService.selectedLanguge.name }}"
   />
 </div>
 <div class="language-list" [ngClass]="isLanguageList ? 'open' : 'closed'">
   <div
     class="language-list-item"
-    *ngFor="let lang of LanguageS.languagesList()"
+    *ngFor="let lang of LanguageService.languagesList()"
     (click)="changeLanguage(lang.id)"
   >
     <p class="language-list-title">
       {{ lang.name }}
     </p>
-    <img
-      class="selected-language-picture mb-2"
-      [src]="lang.picture"
-      alt="{{ lang.name }}"
-    />
+    <img class="selected-language-picture mb-2" [src]="lang.picture" alt="{{ lang.name }}" />
   </div>
 </div>

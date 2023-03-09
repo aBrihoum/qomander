@@ -24,7 +24,14 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              {
+                "input": "src/assets/scss/notyf.scss",
+                "inject": false,
+                "bundleName": "notyf"
+              }
+            ],
             "scripts": []
           },
           "configurations": {
