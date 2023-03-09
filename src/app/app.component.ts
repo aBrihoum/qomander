@@ -13,10 +13,10 @@ import { Component } from '@angular/core';
         border-radius: 8px;
         border: 6px solid #979797;
         overflow-y: auto;
-        margin: 25px auto;
+        margin: 15px auto;
         padding: $boot_padding;
         width: 720px;
-        height: 1080px;
+        height: 1110px;
       }
     `,
   ],

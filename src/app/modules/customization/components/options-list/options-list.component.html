@@ -17,7 +17,7 @@
 </div>
 <button
   class="next-button"
-  [disabled]="!selectedStep.selectedOptions.length"
+  [disabled]="!selectedStep.selectedOptions.length && currentStepIndex === 0"
   (click)="nextButton()"
 >
   Next

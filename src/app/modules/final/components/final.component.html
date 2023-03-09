@@ -1,0 +1,54 @@
+<app-language-bar></app-language-bar>
+<main>
+  <img class="qomander-logo" src="./assets/images/logo/qomander.svg" alt="qomander" />
+  <div class="margin"></div>
+
+  <div class="meal-details-container">
+    <div class="meal-picture">
+      <img [src]="selectedMeal.picture" alt="{{ selectedMeal.name }}" />
+    </div>
+    <div class="meal-name">
+      <p>{{ selectedMeal.name }}</p>
+      <p class="meal-price">{{ selectedMeal.price }} DZD</p>
+    </div>
+  </div>
+
+  <div class="selected-options">
+    <p class="selected-options-heading">
+      Selected options <span>+{{ optionsTotalPrice }} DZD</span>
+    </p>
+    <div class="selected-options-container">
+      <div class="option" *ngFor="let option of selectedOptions">
+        <img [src]="option.picture" alt="{{ option.name }}" />
+        <p>{{ option.name }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="heading">
+    <img src="./assets/images/icons/order.png" alt="order" class="heading-picture" />
+    <h1>Order added</h1>
+    <h2>
+      Are you sure you don't <br />
+      want to add a drink ?
+    </h2>
+    <div class="heading__drink">
+      <img class="heading__drink__image" src="./assets/images/categories/drinks.webp" alt="drink" />
+      <div>
+        <p class="heading__drink__title">Coca Cola</p>
+        <p class="heading__drink__price">70 DZD</p>
+      </div>
+      <div class="heading__drink__circle"><span>+</span></div>
+    </div>
+  </div>
+  <div class="footer">
+    <h2 class="footer__heading">
+      Have you completed your order or <br />
+      you want to continue your selection?
+    </h2>
+    <div class="footer__buttons">
+      <button class="white">Finish</button>
+      <button class="orange">Select more</button>
+    </div>
+  </div>
+</main>

@@ -4,9 +4,9 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'welcome',
+    path: 'home',
     loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'options',
     loadChildren: () =>
       import('./modules/customization/customization.module').then((m) => m.CustomizationModule),
+  },
+  {
+    path: 'order-detail',
+    loadChildren: () => import('./modules/final/final.module').then((m) => m.FinalModule),
   },
 ];
 @NgModule({

@@ -1,0 +1,176 @@
+@import "/src/assets/scss/colors";
+%card {
+  padding: 15px 27px;
+  background-color: $secondary;
+  border-radius: 30px;
+}
+$card_width: 480px;
+main {
+  text-align: center;
+  .qomander-logo {
+    max-width: 70px;
+    width: 100%;
+    position: relative;
+    bottom: -7px;
+  }
+  .margin {
+    margin-top: 40px;
+  }
+  .meal-details-container {
+    @extend %card;
+    display: flex;
+    align-items: center;
+    max-width: $card_width;
+    margin-inline: auto;
+    // justify-content: space-evenly;
+    .meal-picture {
+      img {
+        max-height: 75px;
+        height: 100%;
+        width: auto;
+      }
+    }
+    .meal-name {
+      font-weight: 600;
+      margin-left: 30px;
+      font-size: 30px;
+      p.meal-price {
+        font-size: 25px;
+        color: $primary;
+        text-align: start;
+      }
+    }
+  }
+  .selected-options {
+    margin-top: 17px;
+    max-width: $card_width;
+    margin-inline: auto;
+    @extend %card;
+    &-heading {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      span {
+        color: $primary;
+        font-size: 18px;
+      }
+    }
+    &-container {
+      display: flex;
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 5px;
+      justify-content: space-between;
+      .option {
+        text-align: center;
+        flex-shrink: 0;
+        margin-right: 23px;
+        img {
+          max-height: 55px;
+          // background-color: white;
+          padding: 3px;
+          border-radius: 15px;
+          margin: auto;
+        }
+        p {
+          font-weight: 600;
+          font-size: 12.5px;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+  .heading {
+    text-align: center;
+    margin-top: 30px;
+    &-picture {
+      max-width: 130px;
+      margin-inline: auto;
+    }
+    h1 {
+      color: $blue;
+      font-size: 55px;
+      font-weight: bold;
+    }
+    h2 {
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 22px;
+    }
+    &__drink {
+      background-color: $secondary;
+      max-width: 320px;
+      margin-inline: auto;
+      border: 2.5px solid $primary;
+      border-radius: 15px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      position: relative;
+      &__image {
+        max-height: 85px;
+      }
+      &__title {
+        font-size: 29px;
+        font-weight: 600;
+      }
+      &__price {
+        color: $primary;
+        text-align: start;
+        font-weight: 600;
+        font-size: 22px;
+      }
+      &__circle {
+        background-color: $secondary;
+        width: 50px;
+        height: 50px;
+        border-color: $primary $primary $secondary $secondary;
+        border-width: 2.5px;
+        border-style: solid;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(45deg);
+        //
+        position: absolute;
+        right: -25px;
+        top: 32px;
+        > span {
+          color: $primary;
+          font-weight: bold;
+          font-size: 33px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  .footer {
+    margin-top: 35px;
+    &__heading {
+      font-weight: 600;
+      font-size: 22px;
+    }
+    &__buttons {
+      display: flex;
+      margin-top: 17px;
+      justify-content: space-around;
+      > button {
+        width: 47%;
+        font-weight: 600;
+        border-radius: 18px;
+        height: 70px;
+        border-radius: 11px;
+        &.white {
+          background-color: $white;
+          color: $smoke;
+        }
+        &.orange {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}

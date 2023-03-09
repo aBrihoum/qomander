@@ -65,7 +65,7 @@ export class MealOptionsListComponent {
     if (this.steps.length - 1 > this.currentStepIndex) {
       ++this.currentStepIndex;
     } else {
-      // this.router.navigate(['/order-detail']);
+      this.router.navigate(['/order-detail']);
     }
     this.refreshVars();
   }
