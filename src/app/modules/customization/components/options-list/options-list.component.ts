@@ -11,7 +11,7 @@ import {
   styleUrls: ['./options-list.component.scss'],
 })
 export class MealOptionsListComponent {
-  constructor(private MealOptionsService: MealOptionsService, private router: Router) {}
+  constructor(private MealOptionsService: MealOptionsService, private route: Router) {}
 
   @Output() updateSelectedOptionsEvent = new EventEmitter<boolean>();
 
@@ -65,14 +65,14 @@ export class MealOptionsListComponent {
     if (this.steps.length - 1 > this.currentStepIndex) {
       ++this.currentStepIndex;
     } else {
-      this.router.navigate(['/order-detail']);
+      this.route.navigate(['/order-detail']);
     }
     this.refreshVars();
   }
 
   backButton() {
     if (this.currentStepIndex === 0) {
-      this.router.navigate(['/menu']);
+      this.route.navigate(['/menu']);
     } else {
       --this.currentStepIndex;
     }

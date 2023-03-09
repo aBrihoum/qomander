@@ -35,7 +35,7 @@ export class CustomizationComponent {
 
   ngOnInit() {
     if (Object.keys(this.selectedMeal).length === 0) {
-      // this.route.navigate(['/menu']);
+      this.route.navigate(['/menu']);
     }
   }
 }

@@ -12,6 +12,7 @@ main {
     width: 100%;
     position: relative;
     bottom: -7px;
+    cursor: pointer;
   }
   .margin {
     margin-top: 40px;
@@ -22,7 +23,6 @@ main {
     align-items: center;
     max-width: $card_width;
     margin-inline: auto;
-    // justify-content: space-evenly;
     .meal-picture {
       img {
         max-height: 75px;
@@ -61,7 +61,6 @@ main {
       width: 100%;
       overflow-x: auto;
       padding-bottom: 5px;
-      justify-content: space-between;
       .option {
         text-align: center;
         flex-shrink: 0;

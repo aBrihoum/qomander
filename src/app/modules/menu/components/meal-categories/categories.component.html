@@ -1,6 +1,11 @@
 <section class="main">
-  <div class="qomander-logo-container" routerLink="/welcome">
-    <img class="qomander-logo" src="./assets/images/logo/qomander.svg" alt="qomander" />
+  <div class="qomander-logo-container">
+    <img
+      class="qomander-logo"
+      src="./assets/images/logo/qomander.svg"
+      alt="qomander"
+      [routerLink]="'/home'"
+    />
   </div>
   <div class="padding"></div>
   <div class="categories-container" #catContainer>
