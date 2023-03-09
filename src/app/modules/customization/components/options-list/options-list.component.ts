@@ -72,7 +72,8 @@ export class MealOptionsListComponent {
 
   backButton() {
     if (this.currentStepIndex === 0) {
-      this.route.navigate(['/menu']);
+      //sorry, too lazy to reset all the already modified vars, so i just refresh
+      this.route.navigate(['/menu']).then(() => window.location.reload());
     } else {
       --this.currentStepIndex;
     }

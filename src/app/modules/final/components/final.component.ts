@@ -16,6 +16,11 @@ export class FinalComponent {
   optionsTotalPrice: number = this.MealOptionsService.returnSelectedMealOptionsTotalPrice();
   selectedMealQuantity = this.MealOptionsService.returnSelectedMealQuantity();
 
+  reset() {
+    //sorry, too lazy to reset all the already modified vars, so i just refresh
+    this.route.navigate(['/menu']).then(() => window.location.reload());
+  }
+
   ngOnInit() {
     if (Object.keys(this.selectedMeal).length === 0) {
       this.route.navigate(['/menu']);

@@ -4,7 +4,7 @@
     class="qomander-logo"
     src="./assets/images/logo/qomander.svg"
     alt="qomander"
-    [routerLink]="'/menu'"
+    (click)="reset()"
   />
   <div class="margin"></div>
 
@@ -52,7 +52,7 @@
       you want to continue your selection?
     </h2>
     <div class="footer__buttons">
-      <button class="white">Finish</button>
+      <button class="white" (click)="reset()">Finish</button>
       <button class="orange">Select more</button>
     </div>
   </div>
