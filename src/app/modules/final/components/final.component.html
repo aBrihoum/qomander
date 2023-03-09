@@ -7,7 +7,6 @@
     (click)="reset()"
   />
   <div class="margin"></div>
-
   <div class="meal-details-container">
     <div class="meal-picture">
       <img [src]="selectedMeal.picture" alt="{{ selectedMeal.name }}" />
@@ -22,7 +21,7 @@
     <p class="selected-options-heading">
       Selected options <span>+{{ optionsTotalPrice }} DZD</span>
     </p>
-    <div class="selected-options-container">
+    <div class="selected-options-container" #optionsContainer (wheel)="scrollEvent($event)">
       <div class="option" *ngFor="let option of selectedOptions">
         <img [src]="option.picture" alt="{{ option.name }}" />
         <p>{{ option.name }}</p>

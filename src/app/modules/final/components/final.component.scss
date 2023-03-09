@@ -61,6 +61,7 @@ main {
       width: 100%;
       overflow-x: auto;
       padding-bottom: 5px;
+      scroll-behavior: smooth;
       .option {
         text-align: center;
         flex-shrink: 0;
