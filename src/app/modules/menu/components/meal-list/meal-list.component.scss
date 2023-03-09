@@ -21,6 +21,8 @@
     margin-top: 30px;
     overflow-y: auto;
     padding-bottom: 30px;
+    padding-right: 15px; // bech scrollbar tji mach las9a
+    margin-right: -15px; // bech scrollbar tji mach las9a
     .item {
       background-color: $secondary;
       margin-bottom: 22px;
@@ -52,6 +54,6 @@
   height: 109px;
   position: absolute;
   bottom: -25px;
-  background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(96 96 96 / 70%) 87%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 93%) 76%);
   margin-left: -20px;
 }
