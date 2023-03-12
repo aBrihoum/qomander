@@ -2,7 +2,7 @@
 <section class="main-view">
   <app-meal-categories (categoryChangedEvent)="refreshMealList()"></app-meal-categories>
   <section class="menu-container">
-    <h1 class="heading">What will you be eating today</h1>
+    <h1 class="heading">What will you be eating today?</h1>
     <div class="menu-items" #menuItems>
       <ng-container *ngFor="let meal of mealList">
         <div class="item" (click)="selectMeal(meal)" routerLink="/options">

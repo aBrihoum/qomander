@@ -11,7 +11,7 @@
   >
     <img class="option-picture" [src]="option.picture" alt="{{ option.name }}" />
     <p class="option-title">{{ option.name }}</p>
-    <p class="option-price">+ {{ option.price }} DZD</p>
+    <p class="option-price">{{ option.price === 0 ? "Free" : "+ " + option.price + " DZD" }}</p>
     <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
   </div>
 </div>

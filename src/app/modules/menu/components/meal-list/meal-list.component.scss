@@ -10,41 +10,49 @@
   flex-direction: column;
   position: relative;
   .heading {
-    margin-top: 140px;
-    font-size: 45px;
+    margin-top: 128px;
+    font-size: 33px;
     font-weight: bold;
+    margin-bottom: 18px;
+    line-height: 60px;
   }
   .menu-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 30px;
     overflow-y: auto;
     padding-bottom: 30px;
     padding-right: 15px; // bech scrollbar tji mach las9a
     margin-right: -15px; // bech scrollbar tji mach las9a
     .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background-color: $secondary;
       margin-bottom: 22px;
-      padding: 10px;
-      border-radius: 30px;
-      width: 150px;
+      padding: 20px 10px 10px 10px;
+      border-radius: 22px;
+      width: 100px;
       cursor: pointer;
+      text-align: center;
       &-picture {
-        max-height: 85px;
-        margin: auto;
+        max-height: 73px;
+        max-width: 100%;
       }
       &-title {
         text-align: center;
         font-weight: 600;
-        font-size: 19px;
-        padding-top: 5px;
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        line-height: 20px;
       }
       &-price {
         text-align: center;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         color: $primary;
+        padding-bottom: 5px;
       }
     }
   }

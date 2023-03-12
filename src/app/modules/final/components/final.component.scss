@@ -1,17 +1,16 @@
 @import "/src/assets/scss/colors";
 %card {
-  padding: 15px 27px;
+  padding: 12px 20px;
   background-color: $secondary;
-  border-radius: 30px;
+  border-radius: 20px;
 }
-$card_width: 480px;
+$card_width: 315px;
 main {
-  text-align: center;
   .qomander-logo {
-    max-width: 70px;
+    max-width: 60px;
     width: 100%;
     position: relative;
-    bottom: -7px;
+    bottom: -11px;
     cursor: pointer;
   }
   .margin {
@@ -33,11 +32,11 @@ main {
     .meal-name {
       font-weight: 600;
       margin-left: 30px;
-      font-size: 30px;
+      font-size: 22px;
+      line-height: 1.5;
       p.meal-price {
-        font-size: 25px;
-        color: $primary;
-        text-align: start;
+        font-size: 18px;
+        color: #d65745;
       }
     }
   }
@@ -47,13 +46,14 @@ main {
     margin-inline: auto;
     @extend %card;
     &-heading {
+      font-size: 17px;
       font-weight: 600;
       margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
       span {
         color: $primary;
-        font-size: 18px;
+        font-size: 15px;
       }
     }
     &-container {
@@ -67,15 +67,14 @@ main {
         flex-shrink: 0;
         margin-right: 23px;
         img {
-          max-height: 55px;
+          max-height: 45px;
           // background-color: white;
           padding: 3px;
           border-radius: 15px;
-          margin: auto;
         }
         p {
           font-weight: 600;
-          font-size: 12.5px;
+          font-size: 11.5px;
           margin-top: 3px;
         }
       }
@@ -85,49 +84,50 @@ main {
     text-align: center;
     margin-top: 30px;
     &-picture {
-      max-width: 130px;
+      max-width: 100px;
       margin-inline: auto;
     }
     h1 {
       color: $blue;
-      font-size: 55px;
+      font-size: 41px;
       font-weight: bold;
     }
     h2 {
-      margin-top: 15px;
+      margin-top: 38px;
+      font-size: 19px;
       font-weight: 600;
-      font-size: 22px;
     }
     &__drink {
       background-color: $secondary;
-      max-width: 320px;
+      max-width: 230px;
       margin-inline: auto;
       border: 2.5px solid $primary;
       border-radius: 15px;
-      padding: 12px;
+      padding: 10px 12px;
       display: flex;
       justify-content: space-around;
       margin-top: 10px;
       position: relative;
       cursor: pointer;
       &__image {
-        max-height: 85px;
+        max-height: 65px;
       }
       &__title {
-        font-size: 29px;
+        font-size: 22px;
+        line-height: 1.5;
         font-weight: 600;
       }
       &__price {
         color: $primary;
         text-align: start;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 18px;
       }
       &__circle {
-        background-color: $secondary;
-        width: 50px;
-        height: 50px;
-        border-color: $primary $primary $secondary $secondary;
+        background-color: #1f1f1f;
+        width: 35px;
+        height: 35px;
+        border-color: #d65745 #d65745 #1f1f1f #1f1f1f;
         border-width: 2.5px;
         border-style: solid;
         border-radius: 50%;
@@ -135,10 +135,9 @@ main {
         align-items: center;
         justify-content: center;
         transform: rotate(45deg);
-        //
         position: absolute;
-        right: -25px;
-        top: 32px;
+        right: -19px;
+        top: 22px;
         > span {
           color: $primary;
           font-weight: bold;
@@ -149,10 +148,11 @@ main {
     }
   }
   .footer {
-    margin-top: 35px;
+    margin-top: 50px;
+    text-align: center;
     &__heading {
       font-weight: 600;
-      font-size: 22px;
+      font-size: 21px;
     }
     &__buttons {
       display: flex;
@@ -161,15 +161,17 @@ main {
       > button {
         width: 47%;
         font-weight: 600;
-        border-radius: 18px;
         height: 70px;
-        border-radius: 11px;
+        border-radius: 18px;
+        font-size: 20px;
+        cursor: pointer;
         &.white {
           background-color: $white;
           color: $smoke;
         }
         &.orange {
           background-color: $primary;
+          color: white;
         }
       }
     }

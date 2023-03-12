@@ -19,7 +19,8 @@
 
   <div class="selected-options">
     <p class="selected-options-heading">
-      Selected options <span>+{{ optionsTotalPrice }} DZD</span>
+      Selected options
+      <span>{{ optionsTotalPrice === 0 ? "Free" : "+ " + optionsTotalPrice + " DZD" }}</span>
     </p>
     <div class="selected-options-container" #optionsContainer (wheel)="scrollEvent($event)">
       <div class="option" *ngFor="let option of selectedOptions">

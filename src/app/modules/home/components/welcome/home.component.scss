@@ -12,7 +12,7 @@
       justify-content: center;
       align-items: center;
       &-logo {
-        max-width: 115px;
+        max-width: 100px;
         width: 100%;
         cursor: pointer;
       }
@@ -21,13 +21,13 @@
         font-family: "RR Beaver";
         color: #d65745;
         margin-left: 33px;
-        font-size: 63px;
+        font-size: 47px;
       }
     }
     .heading {
       margin-top: 96px;
       margin-bottom: 70px;
-      font-size: 55px;
+      font-size: 45px;
       font-weight: bold;
     }
   }
@@ -41,7 +41,7 @@
     height: 100%;
     .order-type {
       display: flex;
-      margin-top: 124px;
+      margin-top: 110px;
       flex-wrap: wrap;
       justify-content: center;
       .eat-in,
@@ -49,11 +49,11 @@
         cursor: pointer;
         margin-inline: 27px;
         background-color: $secondary;
-        padding: 34px 40px 17px 40px;
+        padding: 40px 40px 25px 40px;
         border-radius: 20px;
         .button-picture {
           width: 100%;
-          max-width: 130px;
+          max-width: 105px;
         }
         .title {
           font-weight: bold;

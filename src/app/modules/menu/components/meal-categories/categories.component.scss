@@ -2,7 +2,7 @@
 
 :host {
   background-color: $secondary;
-  max-width: 180px;
+  max-width: 150px;
   width: 100%;
   margin-bottom: -25px;
   margin-left: -25px;
@@ -16,36 +16,38 @@
   position: relative;
   .qomander-logo-container {
     padding-top: 45px;
+    margin-inline: auto;
     .qomander-logo {
-      max-width: 67px;
+      max-width: 60px;
       width: 100%;
       margin: auto;
       cursor: pointer;
     }
   }
   .padding {
-    padding-top: 205px;
+    padding-top: 165px;
   }
   .categories-container {
-    padding-inline: 20px;
+    padding-inline: 15px;
     padding-bottom: 108px;
     padding-top: 10px;
     overflow-y: auto;
     .category {
       background-color: $grey;
       margin-bottom: 22px;
-      padding: 10px;
-      border-radius: 30px;
+      padding: 13px 10px;
+      border-radius: 17px;
       transition: outline-color 0.3s;
+      text-align: center;
       cursor: pointer;
       &-picture {
-        max-height: 65px;
-        margin: auto;
+        max-width: 86%;
+        max-height: 49px;
       }
       &-name {
         text-align: center;
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         padding-top: 5px;
       }
       &.selected {

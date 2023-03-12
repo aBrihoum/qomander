@@ -10,13 +10,15 @@ import { Component } from '@angular/core';
       @import '/src/assets/scss/_vars.scss';
       section.boot {
         background-color: black;
-        border-radius: 8px;
-        border: 6px solid #979797;
+        border-radius: 60px;
+        border: 6px solid #595959;
         overflow-y: auto;
         margin: 15px auto;
         padding: $boot_padding;
-        width: 720px;
-        height: 1110px;
+        /* width: 720px;
+        height: 1110px; */
+        width: 550px;
+        height: 875px;
       }
     `,
   ],

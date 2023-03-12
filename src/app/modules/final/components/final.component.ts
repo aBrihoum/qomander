@@ -36,8 +36,15 @@ export class FinalComponent {
   }
 
   ngOnInit() {
+    this.NotoficationService.trigger(true);
     if (Object.keys(this.selectedMeal).length === 0) {
       this.route.navigate(['/menu']);
     }
+    console.table(`Selected Meal : `);
+    console.table(this.selectedMeal);
+    console.log(`Selected Meal Quantity : `, this.selectedMealQuantity);
+    console.table(`Selected Options : `);
+    console.table(this.selectedOptions);
+    console.log(`Selected Options Total Price :`, this.optionsTotalPrice);
   }
 }

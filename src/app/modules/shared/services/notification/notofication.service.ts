@@ -12,11 +12,13 @@ export class NotoficationService {
       y: 'bottom',
     },
   });
-  trigger() {
+  trigger(console?: boolean) {
+    let message = 'This is just a demo, this feature is not implemented';
+    if (console) message = 'check the console';
     this.notyf.success({
-      message: 'This is just a demo, this feature not implemented',
+      message: message,
       dismissible: true,
-      duration: 3500,
+      duration: 3000,
       icon: false,
     });
   }

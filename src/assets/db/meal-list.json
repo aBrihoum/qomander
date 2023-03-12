@@ -1,24 +1,24 @@
 [
   {
-    "name": "Tacos double",
+    "name": "Tacos Double",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-double.webp",
     "price": 400
   },
   {
-    "name": "Tacos special",
+    "name": "Tacos Special",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-supreme.webp",
     "price": 250
   },
   {
-    "name": "Tacos simple",
+    "name": "Tacos Simple",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-simple.webp",
     "price": 200
   },
   {
-    "name": "Tacos maxi",
+    "name": "Tacos Maxi",
     "categoryKey": "tacos",
     "picture": "/assets/images/meals/tacos/tacos-maxi.webp",
     "price": 300
