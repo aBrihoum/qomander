@@ -6,13 +6,7 @@
     <div class="menu-items" #menuItems>
       <ng-container *ngFor="let meal of mealList">
         <div class="item" (click)="selectMeal(meal)" routerLink="/options">
-          <img
-            class="item-picture"
-            [src]="meal.picture"
-            alt="{{ meal.name }}"
-            height="73"
-            width="90"
-          />
+          <img class="item-picture" [src]="meal.picture" alt="{{ meal.name }}" height="73" />
           <p class="item-title">{{ meal.name }}</p>
           <p class="item-price">{{ meal.price }} DZD</p>
         </div>
