@@ -66,3 +66,15 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 93%) 76%);
   margin-left: -20px;
 }
+.no-data {
+  text-align: center;
+  > img {
+    max-width: 75%;
+    border: 2px solid $primary;
+    border-radius: 13px;
+    padding: 10px;
+  }
+  > h1 {
+    margin-top: 15px;
+  }
+}

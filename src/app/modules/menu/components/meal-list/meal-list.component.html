@@ -3,7 +3,7 @@
   <app-meal-categories (categoryChangedEvent)="refreshMealList()"></app-meal-categories>
   <section class="menu-container">
     <h1 class="heading">What will you be eating today?</h1>
-    <div class="menu-items" #menuItems>
+    <div class="menu-items" #menuItems *ngIf="mealList.length; else noData">
       <ng-container *ngFor="let meal of mealList">
         <div class="item" (click)="selectMeal(meal)" routerLink="/options">
           <img class="item-picture" [src]="meal.picture" alt="{{ meal.name }}" height="73" />
@@ -15,3 +15,9 @@
     <div class="scroll-shadow"></div>
   </section>
 </section>
+<ng-template #noData>
+  <div class="no-data">
+    <img src="./assets/images/other/tom.webp" alt="tom" />
+    <h1>meeh, too busy to add more meals</h1>
+  </div>
+</ng-template>
