@@ -9,7 +9,13 @@
     *ngFor="let option of steps[currentStepIndex].options"
     (click)="optionClicked(option)"
   >
-    <img class="option-picture" [src]="option.picture" alt="{{ option.name }}" />
+    <img
+      class="option-picture"
+      [src]="option.picture"
+      alt="{{ option.name }}"
+      height="73"
+      width="90"
+    />
     <p class="option-title">{{ option.name }}</p>
     <p class="option-price">{{ option.price === 0 ? "Free" : "+ " + option.price + " DZD" }}</p>
     <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />

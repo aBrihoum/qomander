@@ -35,9 +35,12 @@
       width: 100px;
       cursor: pointer;
       text-align: center;
+      align-items: center;
       &-picture {
         max-height: 73px;
         max-width: 100%;
+        height: auto;
+        width: auto;
       }
       &-title {
         text-align: center;
