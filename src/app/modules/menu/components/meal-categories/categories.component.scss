@@ -14,20 +14,18 @@
   flex-direction: column;
   height: 100%;
   position: relative;
-  .qomander-logo-container {
+  .qomander {
     padding-top: 45px;
     margin-inline: auto;
-    .qomander-logo {
+    margin-bottom: 165px;
+    &__logo {
       max-width: 60px;
       width: 100%;
       margin: auto;
       cursor: pointer;
     }
   }
-  .padding {
-    padding-top: 165px;
-  }
-  .categories-container {
+  .categories-block {
     padding-inline: 15px;
     padding-bottom: 108px;
     padding-top: 10px;
@@ -40,17 +38,17 @@
       transition: outline-color 0.3s;
       text-align: center;
       cursor: pointer;
-      &-picture {
+      &__picture {
         max-width: 86%;
         max-height: 49px;
       }
-      &-name {
+      &__name {
         text-align: center;
         font-weight: 600;
         font-size: 13px;
         padding-top: 5px;
       }
-      &.selected {
+      &__selected {
         outline: 2.5px solid $primary;
         position: relative;
         img.check-mark {

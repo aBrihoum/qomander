@@ -6,23 +6,22 @@
     alt="qomander"
     (click)="reset()"
   />
-  <div class="margin"></div>
-  <div class="meal-details-container">
-    <div class="meal-picture">
+  <div class="meal">
+    <div class="meal__picture">
       <img [src]="selectedMeal.picture" alt="{{ selectedMeal.name }}" />
     </div>
-    <div class="meal-name">
+    <div class="meal__name">
       <p>{{ selectedMeal.name }}</p>
-      <p class="meal-price">{{ selectedMeal.price }} DZD</p>
+      <p class="meal__price">{{ selectedMeal.price }} DZD</p>
     </div>
   </div>
 
   <div class="selected-options">
-    <p class="selected-options-heading">
+    <p class="selected-options__heading">
       Selected options
       <span>{{ optionsTotalPrice === 0 ? "Free" : "+ " + optionsTotalPrice + " DZD" }}</span>
     </p>
-    <div class="selected-options-container" #optionsContainer (wheel)="scrollEvent($event)">
+    <div class="selected-options__stack" #optionsContainer (wheel)="scrollEvent($event)">
       <div class="option" *ngFor="let option of selectedOptions">
         <img [src]="option.picture" alt="{{ option.name }}" />
         <p>{{ option.name }}</p>
@@ -31,7 +30,7 @@
   </div>
 
   <div class="heading">
-    <img src="./assets/images/icons/order.png" alt="order" class="heading-picture" />
+    <img src="./assets/images/icons/order.png" alt="order" class="heading__picture" />
     <h1>Order added</h1>
     <h2>
       Are you sure you don't <br />

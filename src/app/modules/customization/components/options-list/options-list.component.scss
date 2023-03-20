@@ -41,11 +41,11 @@
     transition: outline-color 0.3s;
     outline-color: $secondary;
     align-items: center;
-    &-picture {
+    &__picture {
       max-height: 55px;
       max-width: 100%;
     }
-    &-title {
+    &__title {
       text-align: center;
       font-weight: 600;
       font-size: 14px;
@@ -53,14 +53,14 @@
       padding-bottom: 8px;
       line-height: 20px;
     }
-    &-price {
+    &__price {
       text-align: center;
       font-weight: 600;
       font-size: 13px;
       color: $primary;
       padding-bottom: 5px;
     }
-    &.selected {
+    &__selected {
       outline: 2.5px solid $primary;
       position: relative;
       img.check-mark {
@@ -76,7 +76,7 @@
     }
   }
 }
-.next-button {
+button.next {
   background-color: $primary;
   position: absolute;
   bottom: -8px;

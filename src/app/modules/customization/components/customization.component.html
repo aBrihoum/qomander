@@ -4,27 +4,26 @@
     <img src="./assets/images/icons/back.svg" alt="back btn" />
     <span>Back</span>
   </button>
-  <div class="margin"></div>
-  <div class="meal-details-container">
-    <div class="meal-picture">
+  <div class="meal">
+    <div class="meal__picture">
       <img [src]="selectedMeal.picture" alt="{{ selectedMeal.name }}" />
     </div>
-    <div class="meal-name">
+    <div class="meal__name">
       <p>{{ selectedMeal.name }}</p>
-      <p class="meal-price">{{ selectedMeal.price }} DZD</p>
+      <p class="meal__price">{{ selectedMeal.price }} DZD</p>
     </div>
-    <div class="quantity-buttons-container">
-      <button class="quantity-button" (click)="changeSelectedMealQuantity('-')">-</button>
-      <span class="quantity">{{ selectedMealQuantity }}</span>
-      <button class="quantity-button" (click)="changeSelectedMealQuantity('+')">+</button>
+    <div class="quantity-buttons">
+      <button (click)="changeSelectedMealQuantity('-')">-</button>
+      <span>{{ selectedMealQuantity }}</span>
+      <button (click)="changeSelectedMealQuantity('+')">+</button>
     </div>
   </div>
   <div class="selected-options" *ngIf="selectedOptions.length">
-    <p class="selected-options-heading">
+    <p class="heading">
       Selected options
       <span>{{ optionsTotalPrice === 0 ? "Free" : "+ " + optionsTotalPrice + " DZD" }}</span>
     </p>
-    <div class="selected-options-container">
+    <div class="selected-options__stack">
       <div class="option" *ngFor="let option of selectedOptions">
         <img [src]="option.picture" alt="{{ option.name }}" />
         <p>{{ option.name }}</p>

@@ -1,9 +1,9 @@
 @import "/src/assets/scss/colors";
-.main-view {
+.main {
   display: flex;
   height: 100%;
 }
-.menu-container {
+.menu-block {
   width: 100%;
   margin-left: 20px;
   display: flex;
@@ -36,11 +36,11 @@
       cursor: pointer;
       text-align: center;
       align-items: center;
-      &-picture {
+      &__picture {
         max-height: 73px;
         max-width: 100%;
       }
-      &-title {
+      &__title {
         text-align: center;
         font-weight: 600;
         font-size: 14px;
@@ -48,7 +48,7 @@
         padding-bottom: 8px;
         line-height: 20px;
       }
-      &-price {
+      &__price {
         text-align: center;
         font-weight: 600;
         font-size: 13px;

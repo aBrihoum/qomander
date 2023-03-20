@@ -1,14 +1,14 @@
 <app-language-bar></app-language-bar>
-<section class="main-view">
+<section class="main">
   <app-meal-categories (categoryChangedEvent)="refreshMealList()"></app-meal-categories>
-  <section class="menu-container">
+  <section class="menu-block">
     <h1 class="heading">What will you be eating today?</h1>
     <div class="menu-items" #menuItems *ngIf="mealList.length; else noData">
       <ng-container *ngFor="let meal of mealList">
         <div class="item" (click)="selectMeal(meal)" routerLink="/options">
-          <img class="item-picture" [src]="meal.picture" alt="{{ meal.name }}" height="73" />
-          <p class="item-title">{{ meal.name }}</p>
-          <p class="item-price">{{ meal.price }} DZD</p>
+          <img class="item__picture" [src]="meal.picture" alt="{{ meal.name }}" height="73" />
+          <p class="item__title">{{ meal.name }}</p>
+          <p class="item__price">{{ meal.price }} DZD</p>
         </div>
       </ng-container>
     </div>

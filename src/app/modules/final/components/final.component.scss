@@ -12,31 +12,31 @@ main {
     position: relative;
     bottom: -11px;
     cursor: pointer;
+    margin-bottom: 35px;
   }
-  .margin {
-    margin-top: 35px;
-  }
-  .meal-details-container {
+  .meal {
     @extend %card;
     display: flex;
     align-items: center;
     max-width: $card_width;
     margin-inline: auto;
-    .meal-picture {
+    $this: &;
+    &__picture {
       img {
         max-height: 75px;
         height: 100%;
         width: auto;
       }
     }
-    .meal-name {
+    &__name {
       font-weight: 600;
       margin-left: 30px;
       font-size: 22px;
       line-height: 1.5;
-      p.meal-price {
+      .meal__price {
+        // #{$this} is not working here, idk why
         font-size: 18px;
-        color: #d65745;
+        color: $primary;
       }
     }
   }
@@ -45,7 +45,7 @@ main {
     max-width: $card_width;
     margin-inline: auto;
     @extend %card;
-    &-heading {
+    &__heading {
       font-size: 17px;
       font-weight: 600;
       margin-bottom: 8px;
@@ -56,7 +56,7 @@ main {
         font-size: 15px;
       }
     }
-    &-container {
+    &__stack {
       display: flex;
       width: 100%;
       overflow-x: auto;
@@ -66,13 +66,13 @@ main {
         text-align: center;
         flex-shrink: 0;
         margin-right: 23px;
-        img {
+        > img {
           max-height: 45px;
           // background-color: white;
           padding: 3px;
           border-radius: 15px;
         }
-        p {
+        > p {
           font-weight: 600;
           font-size: 11.5px;
           margin-top: 3px;
@@ -83,7 +83,7 @@ main {
   .heading {
     text-align: center;
     margin-top: 30px;
-    &-picture {
+    &__picture {
       max-width: 100px;
       margin-inline: auto;
     }

@@ -11,12 +11,12 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      &-logo {
+      &__logo {
         max-width: 100px;
         width: 100%;
         cursor: pointer;
       }
-      &-title {
+      &__title {
         cursor: pointer;
         font-family: "RR Beaver";
         color: #d65745;
@@ -32,7 +32,7 @@
     }
   }
 
-  .order-type-container {
+  .bottom-section {
     border-top: 15px solid white;
     margin-inline: -25px;
     margin-bottom: -25px;
@@ -44,14 +44,13 @@
       margin-top: 110px;
       flex-wrap: wrap;
       justify-content: center;
-      .eat-in,
-      .take-out {
+      .block {
         cursor: pointer;
         margin-inline: 27px;
         background-color: $secondary;
         padding: 40px 40px 25px 40px;
         border-radius: 20px;
-        .button-picture {
+        .picture {
           width: 100%;
           max-width: 105px;
         }
