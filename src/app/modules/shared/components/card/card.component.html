@@ -1,0 +1,6 @@
+<div class="card" [class.card__selected]="cardData.selected" (click)="cardClicked()">
+  <img class="card__picture" [src]="cardData.picture" alt="{{ cardData.name }}" height="73" />
+  <p class="card__title">{{ cardData.name }}</p>
+  <p class="card__price">{{ cardData.price }} DZD</p>
+  <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
+</div>

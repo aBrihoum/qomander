@@ -5,11 +5,11 @@
     <h1 class="heading">What will you be eating today?</h1>
     <div class="menu-items" #menuItems *ngIf="mealList.length; else noData">
       <ng-container *ngFor="let meal of mealList">
-        <div class="item" (click)="selectMeal(meal)" routerLink="/options">
-          <img class="item__picture" [src]="meal.picture" alt="{{ meal.name }}" height="73" />
-          <p class="item__title">{{ meal.name }}</p>
-          <p class="item__price">{{ meal.price }} DZD</p>
-        </div>
+        <app-card
+          [cardData]="meal"
+          (cardClickedEvent)="selectMeal($event)"
+          routerLink="/options"
+        ></app-card>
       </ng-container>
     </div>
     <div class="scroll-shadow"></div>

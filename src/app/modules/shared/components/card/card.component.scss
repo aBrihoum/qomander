@@ -1,0 +1,47 @@
+@import "/src/assets/scss/colors";
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $secondary;
+  margin-bottom: 22px;
+  padding: 20px 10px 10px 10px;
+  border-radius: 22px;
+  width: 100px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  &__picture {
+    max-height: 73px;
+    max-width: 100%;
+  }
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    line-height: 20px;
+  }
+  &__price {
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    color: $primary;
+    padding-bottom: 5px;
+  }
+  &__selected {
+    outline: 2.5px solid $primary;
+    position: relative;
+    img.check-mark {
+      visibility: visible !important;
+    }
+  }
+  img.check-mark {
+    width: 30px;
+    position: absolute;
+    top: -11px;
+    right: -9px;
+    visibility: hidden;
+  }
+}

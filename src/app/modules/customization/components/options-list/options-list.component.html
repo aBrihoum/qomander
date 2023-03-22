@@ -3,17 +3,9 @@
   You can select only {{ steps[currentStepIndex].canSelect }} type
 </p>
 <div class="options-container" #mealOptions>
-  <div
-    class="option"
-    [class.option__selected]="option.selected"
-    *ngFor="let option of steps[currentStepIndex].options"
-    (click)="optionClicked(option)"
-  >
-    <img class="option__picture" [src]="option.picture" alt="{{ option.name }}" height="55" />
-    <p class="option__title">{{ option.name }}</p>
-    <p class="option__price">{{ option.price === 0 ? "Free" : "+ " + option.price + " DZD" }}</p>
-    <img src="./assets/images/icons/check.svg" alt="check" class="check-mark" />
-  </div>
+  <ng-container *ngFor="let option of steps[currentStepIndex].options">
+    <app-card [cardData]="option" (cardClickedEvent)="optionClicked($event)"></app-card>
+  </ng-container>
 </div>
 <button
   class="next"
