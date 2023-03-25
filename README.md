@@ -1,11 +1,14 @@
 <div align="center">
 <img width="65" src="https://svgshare.com/i/rLe.svg" alt="qomander logo">
 
-#### Qomander - Self ordering restaurant kiosk
+## Qomander - Self ordering restaurant kiosk
 
 <br />
 <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">
 <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular">
+</a>
+<a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
 </a>
 <a href="https://qomander.vercel.app/" target="_blank" rel="noopener noreferrer">
 <img src="https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel">
@@ -16,13 +19,11 @@
 
 </div>
 
----
-
 # Description
 
 This web app is a _self-ordering restaurant kiosk_ similar to those found at McDonald's, Burger King, Subway, and other fast food chains.
 
-This project is made by [Angular](https://angular.io) and fully designed by [Yasser DRIF](https://yasser.design/qomander-self-ordering-restaurant-kiosk).
+This project is made by [Angular](https://angular.io), Vanilla [SASS](https://sass-lang.com/) and fully designed by [Yasser DRIF](https://yasser.design/qomander-self-ordering-restaurant-kiosk).
 
 <div align="center">
 <a href="https://www.behance.net/gallery/114544865/Qomander-Self-ordering-restaurant-kiosk" target="_blank" rel="noopener noreferrer">
@@ -33,7 +34,7 @@ This project is made by [Angular](https://angular.io) and fully designed by [Yas
 > **Note**
 > Me and Yasser are not affiliated.
 
-✳ This project is just a demo; as a result, it lacks some features such as :
+This project is just a demo; as a result, it lacks some features such as :
 
 - Image lazy loading & [LQIP](https://cloudinary.com/blog/low_quality_image_placeholders_lqip_explained)
 
@@ -50,6 +51,8 @@ And more...
 # Demonstration
 
 https://user-images.githubusercontent.com/69421395/226876764-94211174-6668-4612-afc4-f74ae386f6c0.mp4
+
+<br/>
 
 Thanks to [Vercel](https://vercel.com/), you can play with the project online
 
