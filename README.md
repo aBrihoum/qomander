@@ -1,7 +1,7 @@
 <div align="center">
 <img width="65" src="https://svgshare.com/i/rLe.svg" alt="qomander logo">
 
-## Qomander - Self ordering restaurant kiosk
+## Qomander - Self Ordering Restaurant Kiosk
 
 <br />
 <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">
