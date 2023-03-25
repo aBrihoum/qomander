@@ -14,7 +14,7 @@
 <img src="https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel">
 </a>
 <a href="https://github1s.com/aBrihoum/qomander/blob/HEAD/src/app/app.module.ts" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/github1s-View%20project-blue?style=for-the-badge&logo=github">
+<img src="https://img.shields.io/badge/github1s-Browse%20project-blue?style=for-the-badge&logo=github">
 </a>
 
 </div>
@@ -54,9 +54,13 @@ https://user-images.githubusercontent.com/69421395/226876764-94211174-6668-4612-
 
 <br/>
 
+<div align="center">
+
 Thanks to [Vercel](https://vercel.com/), you can play with the project online
 
 [![Qomander Preview](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://qomander.vercel.app/)
+
+</div>
 
 # Preview
 
@@ -82,6 +86,13 @@ Thanks to [Vercel](https://vercel.com/), you can play with the project online
    ├─ main.ts
    └─ styles.scss
 ```
+
+<div align="center">
+<a href="https://github1s.com/aBrihoum/qomander/blob/HEAD/src/app/app.module.ts" target="_blank" rel="noopener noreferrer">
+<img src="https://img.shields.io/badge/github1s-Browse%20project-blue?style=for-the-badge&logo=github">
+</a>
+
+</div>
 
 # Quick start
 
