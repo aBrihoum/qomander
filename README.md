@@ -42,6 +42,8 @@ And more...
 
 https://user-images.githubusercontent.com/69421395/226876764-94211174-6668-4612-afc4-f74ae386f6c0.mp4
 
+---
+
 <img src="https://i.ibb.co/34Gv353/Qomander-preview-1.webp" width="23%"></img> <img src="https://i.ibb.co/XLpqFJ7/Qomander-preview-2.webp" width="23%"></img> <img src="https://i.ibb.co/TPZmRJP/Qomander-preview-3.webp" width="23%"></img> <img src="https://i.ibb.co/hgyD1Tf/Qomander-preview-4.webp" width="23%"></img>
 
 <br/>
@@ -56,19 +58,24 @@ https://user-images.githubusercontent.com/69421395/226876764-94211174-6668-4612-
 
 ```
 📦
-└─ src
-   ├─ app
-   │  └─ modules
-   │     ├─ customization
-   │     ├─ final
-   │     ├─ home
-   │     ├─ menu
-   │     └─ shared
-   │        ├─ components
-   │        └─ services
-   ├─ index.html
-   ├─ main.ts
-   └─ styles.scss
+└─ src/
+   ├─ app/
+   │  ├─ modules/
+   │  │  ├─ customization/
+   │  │  │  ├─ components/
+   │  │  │  └─ customization.module.ts
+   │  │  ├─ final/
+   │  │  │  ├─ components/
+   │  │  │  └─ final.module.ts
+   │  │  ├─ home/
+   │  │  │  ├─ components/
+   │  │  │  └─ home.module.ts
+   │  │  └─ menu/
+   │  │     ├─ components/
+   │  │     └─ menu.module.ts
+   │  ├─ app.component.ts
+   │  └─ app.module.ts
+   └─ index.html
 ```
 
 <div align="center">
