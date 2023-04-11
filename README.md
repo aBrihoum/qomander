@@ -1,34 +1,22 @@
 <div align="center">
-<img width="65" src="https://svgshare.com/i/rLe.svg" alt="qomander logo">
+<img width="65" src="https://svgshare.com/i/rLe.svg">
 
 ## Qomander - Self Ordering Restaurant Kiosk
 
-<br />
-<a href="https://angular.io/" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular">
-</a>
-<a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
-</a>
-<a href="https://qomander.vercel.app/" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel">
-</a>
-<a href="https://github1s.com/aBrihoum/qomander/blob/HEAD/src/app/app.module.ts" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/github1s-Browse%20project-blue?style=for-the-badge&logo=github">
-</a>
+[![angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular)](https://angular.io/) [![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/) [![vercel](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://qomander.vercel.app/) [![github1s](https://img.shields.io/badge/github1s-View%20project-blue?style=for-the-badge&logo=github)](https://github1s.com/aBrihoum/qomander/blob/HEAD/src/app/app.module.ts)
 
 </div>
 
 # Description
 
-This web app is a _self-ordering restaurant kiosk_ similar to those found at McDonald's, Burger King, Subway, and other fast food chains.
+This web app is a **self-ordering restaurant kiosk** similar to those found at McDonald's, Burger King, Subway, and other fast food chains.
 
 This project is made by [Angular](https://angular.io), Vanilla [SASS](https://sass-lang.com/) and fully designed by [Yasser DRIF](https://yasser.design/qomander-self-ordering-restaurant-kiosk).
 
 <div align="center">
-<a href="https://www.behance.net/gallery/114544865/Qomander-Self-ordering-restaurant-kiosk" target="_blank" rel="noopener noreferrer">
-<img width="400" src="https://i.ibb.co/vcgt2Qx/yasser.webp" alt="Qomander - Self ordering restaurant kiosk">
-</a>
+
+[<img width="400" src="https://i.ibb.co/vcgt2Qx/yasser.webp">](https://www.behance.net/gallery/114544865/Qomander-Self-ordering-restaurant-kiosk)
+
 </div>
 
 > **Note**
@@ -48,24 +36,20 @@ This project is just a demo; as a result, it lacks some features such as :
 
 And more...
 
-# Demonstration
-
-https://user-images.githubusercontent.com/69421395/226876764-94211174-6668-4612-afc4-f74ae386f6c0.mp4
-
-<br/>
-
-<div align="center">
-
-Thanks to [Vercel](https://vercel.com/), you can play with the project online
-
-[![Qomander Preview](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://qomander.vercel.app/)
-
-</div>
-
 # Preview
 
 <div align="center">
+
+https://user-images.githubusercontent.com/69421395/226876764-94211174-6668-4612-afc4-f74ae386f6c0.mp4
+
 <img src="https://i.ibb.co/34Gv353/Qomander-preview-1.webp" width="23%"></img> <img src="https://i.ibb.co/XLpqFJ7/Qomander-preview-2.webp" width="23%"></img> <img src="https://i.ibb.co/TPZmRJP/Qomander-preview-3.webp" width="23%"></img> <img src="https://i.ibb.co/hgyD1Tf/Qomander-preview-4.webp" width="23%"></img>
+
+<br/>
+
+▶ Thanks to [Vercel](https://vercel.com/), you can play with the project online :
+
+[![Qomander Preview](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://qomander.vercel.app/)
+
 </div>
 
 # Project structure
@@ -88,9 +72,8 @@ Thanks to [Vercel](https://vercel.com/), you can play with the project online
 ```
 
 <div align="center">
-<a href="https://github1s.com/aBrihoum/qomander/blob/HEAD/src/app/app.module.ts" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/github1s-Browse%20project-blue?style=for-the-badge&logo=github">
-</a>
+
+[![Browse project](https://img.shields.io/badge/github1s-Browse%20project-blue?style=for-the-badge&logo=github)](https://github1s.com/aBrihoum/qomander/blob/HEAD/src/app/app.module.ts)
 
 </div>
 
