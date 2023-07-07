@@ -7,18 +7,18 @@ import MEALCATEGORIES_JSON from '../../../../../assets/db/meal-categories.json';
 export class MealCategoriesService {
   constructor() {}
 
-  private readonly mealCategories: MealCategoriesT[] = MEALCATEGORIES_JSON as MealCategoriesT[];
-  private selectedMealCategory = this.mealCategories[0];
+  private readonly _mealCategories: MealCategoriesT[] = MEALCATEGORIES_JSON as MealCategoriesT[];
+  private _selectedMealCategory = this._mealCategories[0];
 
   changeMealCategory(index: number) {
-    this.selectedMealCategory = this.mealCategories[index];
+    this._selectedMealCategory = this._mealCategories[index];
   }
 
-  returnMealCategories(): MealCategoriesT[] {
-    return this.mealCategories;
+  get selectedMealCategory(): MealCategoriesT {
+    return this._selectedMealCategory;
   }
 
-  returnSelectedMealCategory(): MealCategoriesT {
-    return this.selectedMealCategory;
+  get mealCategories(): MealCategoriesT[] {
+    return this._mealCategories;
   }
 }

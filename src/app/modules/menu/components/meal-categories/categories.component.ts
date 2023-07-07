@@ -12,8 +12,8 @@ export class MealCategoriesComponent {
   constructor(private MealCategoriesService: MealCategoriesService) {}
 
   @Output() categoryChangedEvent = new EventEmitter<boolean>();
-  mealCategories: MealCategoriesT[] = this.MealCategoriesService.returnMealCategories();
-  selectedMealCategory: MealCategoriesT = this.MealCategoriesService.returnSelectedMealCategory();
+  mealCategories: MealCategoriesT[] = this.MealCategoriesService.mealCategories;
+  selectedMealCategory: MealCategoriesT = this.MealCategoriesService.selectedMealCategory;
 
   changeMealCategory(index: number) {
     this.MealCategoriesService.changeMealCategory(index);
@@ -21,7 +21,7 @@ export class MealCategoriesComponent {
   }
 
   refresh() {
-    this.selectedMealCategory = this.MealCategoriesService.returnSelectedMealCategory();
+    this.selectedMealCategory = this.MealCategoriesService.selectedMealCategory;
     this.categoryChangedEvent.emit(true);
   }
 }
