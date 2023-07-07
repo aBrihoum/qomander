@@ -10,7 +10,7 @@ export class MealCategoriesService {
   private readonly _mealCategories: MealCategoriesT[] = MEALCATEGORIES_JSON as MealCategoriesT[];
   private _selectedMealCategory = this._mealCategories[0];
 
-  changeMealCategory(index: number) {
+  setMealCategory(index: number) {
     this._selectedMealCategory = this._mealCategories[index];
   }
 

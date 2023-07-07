@@ -21,6 +21,6 @@ export class MealListComponent {
   }
 
   selectMeal(meal: MealListT) {
-    this.MealOptionsService.updateSelectedMeal(meal);
+    this.MealOptionsService.setSelectedMeal(meal);
   }
 }

@@ -12,7 +12,7 @@
       <div
         class="category"
         [class.category__selected]="cat.name === selectedMealCategory.name"
-        (click)="changeMealCategory(i)"
+        (click)="setMealCategory(i)"
       >
         <img [src]="cat.picture" alt="{{ cat.name }}" class="category__picture" />
         <p class="category__name">{{ cat.name }}</p>

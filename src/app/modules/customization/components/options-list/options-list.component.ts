@@ -56,7 +56,7 @@ export class MealOptionsListComponent {
   }
 
   updateSelectedMealOptions(option: MealOptionsT[]) {
-    this.MealOptionsService.updateSelectedMealOptions(option, this.currentStepIndex);
+    this.MealOptionsService.setSelectedMealOptions(option, this.currentStepIndex);
     this.updateSelectedOptionsEvent.emit(true);
   }
 

@@ -41,17 +41,17 @@ export class MealOptionsService {
   ];
   // ~~ UPDATES ~~ //
 
-  updateSelectedMeal(meal: MealListT) {
-    this._selectedMeal = { ...meal };
+  setSelectedMeal(meal: MealListT) {
+    this._selectedMeal = meal;
   }
 
-  updateSelectedMealOptions(selectedOptions: MealOptionsT[], currentStepIndex: number) {
+  setSelectedMealOptions(selectedOptions: MealOptionsT[], currentStepIndex: number) {
     this._steps[currentStepIndex].selectedOptions = selectedOptions;
     this._selectedMealOptions = this._steps.flatMap((el) => el.selectedOptions);
     //* THANKGOD for `flatMap`
   }
 
-  updateSelectedMealQuantity(op: '+' | '-'): number {
+  setSelectedMealQuantity(op: '+' | '-'): number {
     if (op === '+') {
       ++this._selectedMealQuantity;
     } else {

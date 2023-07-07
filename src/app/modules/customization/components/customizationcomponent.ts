@@ -26,7 +26,7 @@ export class CustomizationComponent {
   }
 
   changeSelectedMealQuantity(op: '+' | '-') {
-    this.selectedMealQuantity = this.MealOptionsService.updateSelectedMealQuantity(op);
+    this.selectedMealQuantity = this.MealOptionsService.setSelectedMealQuantity(op);
   }
 
   backButton() {

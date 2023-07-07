@@ -15,8 +15,8 @@ export class MealCategoriesComponent {
   mealCategories: MealCategoriesT[] = this.MealCategoriesService.mealCategories;
   selectedMealCategory: MealCategoriesT = this.MealCategoriesService.selectedMealCategory;
 
-  changeMealCategory(index: number) {
-    this.MealCategoriesService.changeMealCategory(index);
+  setMealCategory(index: number) {
+    this.MealCategoriesService.setMealCategory(index);
     this.refresh();
   }
 
