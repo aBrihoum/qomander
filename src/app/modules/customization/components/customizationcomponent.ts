@@ -14,15 +14,15 @@ export class CustomizationComponent {
 
   @ViewChild(MealOptionsListComponent) optionsComponent!: MealOptionsListComponent;
 
-  readonly selectedMeal: MealListT = this.MealOptionsService.returnSelectedMeal();
-  selectedOptions: MealOptionsT[] = this.MealOptionsService.returnSelectedMealOptions();
-  optionsTotalPrice: number = this.MealOptionsService.returnSelectedMealOptionsTotalPrice();
-  selectedMealQuantity = this.MealOptionsService.returnSelectedMealQuantity();
+  readonly selectedMeal: MealListT = this.MealOptionsService.selectedMeal;
+  selectedOptions: MealOptionsT[] = this.MealOptionsService.selectedMealOptions;
+  optionsTotalPrice: number = this.MealOptionsService.selectedMealOptionsTotalPrice;
+  selectedMealQuantity = this.MealOptionsService.selectedMealQuantity;
 
   refreshVars() {
     // called from `options-list _ @Output`
-    this.selectedOptions = this.MealOptionsService.returnSelectedMealOptions();
-    this.optionsTotalPrice = this.MealOptionsService.returnSelectedMealOptionsTotalPrice();
+    this.selectedOptions = this.MealOptionsService.selectedMealOptions;
+    this.optionsTotalPrice = this.MealOptionsService.selectedMealOptionsTotalPrice;
   }
 
   changeSelectedMealQuantity(op: '+' | '-') {

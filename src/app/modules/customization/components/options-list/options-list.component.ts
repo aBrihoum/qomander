@@ -16,7 +16,7 @@ export class MealOptionsListComponent {
   @Output() updateSelectedOptionsEvent = new EventEmitter<boolean>();
 
   currentStepIndex = 0;
-  steps: StepsT[] = this.MealOptionsService.returnSteps();
+  steps: StepsT[] = this.MealOptionsService.steps;
   selectedStep = this.steps[this.currentStepIndex];
 
   optionClicked(option: MealOptionsT) {

@@ -16,10 +16,10 @@ export class FinalComponent {
     private route: Router
   ) {}
 
-  readonly selectedMeal: MealListT = this.MealOptionsService.returnSelectedMeal();
-  selectedOptions: MealOptionsT[] = this.MealOptionsService.returnSelectedMealOptions();
-  optionsTotalPrice: number = this.MealOptionsService.returnSelectedMealOptionsTotalPrice();
-  selectedMealQuantity = this.MealOptionsService.returnSelectedMealQuantity();
+  readonly selectedMeal: MealListT = this.MealOptionsService.selectedMeal;
+  selectedOptions: MealOptionsT[] = this.MealOptionsService.selectedMealOptions;
+  optionsTotalPrice: number = this.MealOptionsService.selectedMealOptionsTotalPrice;
+  selectedMealQuantity = this.MealOptionsService.selectedMealQuantity;
   @ViewChild('optionsContainer') optionsContainer!: ElementRef<HTMLDivElement>;
   reset() {
     //sorry, too lazy to reset all the already modified vars, so i just refresh

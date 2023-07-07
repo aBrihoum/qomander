@@ -11,96 +11,96 @@ import { MealListT } from '../meal-list/meal-list.model';
 export class MealOptionsService {
   constructor() {}
 
-  private selectedMeal: MealListT = {} as MealListT;
-  private selectedMealOptions: MealOptionsT[] = [];
-  private selectedMealOptionsTotalPrice = 0;
-  private selectedMealQuantity: number = 1;
+  private _selectedMeal: MealListT = {} as MealListT;
+  private _selectedMealOptions: MealOptionsT[] = [];
+  private _selectedMealOptionsTotalPrice = 0;
+  private _selectedMealQuantity: number = 1;
 
-  private steps: StepsT[] = [
+  private _steps: StepsT[] = [
     {
       name: 'meat',
       heading: 'Select the meat type:',
       canSelect: 1,
-      options: this.returnMeatOptions(),
+      options: this.meatOptions,
       selectedOptions: [] as MealOptionsT[],
     },
     {
       name: 'sauce',
       heading: 'Select the sauce type:',
       canSelect: 2,
-      options: this.returnSauceOptions(),
+      options: this.sauceOptions,
       selectedOptions: [] as MealOptionsT[],
     },
     {
       name: 'garnish',
       heading: 'Select additional garnish:',
       canSelect: 0,
-      options: this.returnGarnishOptions(),
+      options: this.garnishOptions,
       selectedOptions: [] as MealOptionsT[],
     },
   ];
   // ~~ UPDATES ~~ //
 
   updateSelectedMeal(meal: MealListT) {
-    this.selectedMeal = { ...meal };
+    this._selectedMeal = { ...meal };
   }
 
   updateSelectedMealOptions(selectedOptions: MealOptionsT[], currentStepIndex: number) {
-    this.steps[currentStepIndex].selectedOptions = selectedOptions;
-    this.selectedMealOptions = this.steps.flatMap((el) => el.selectedOptions);
+    this._steps[currentStepIndex].selectedOptions = selectedOptions;
+    this._selectedMealOptions = this._steps.flatMap((el) => el.selectedOptions);
     //* THANKGOD for `flatMap`
   }
 
   updateSelectedMealQuantity(op: '+' | '-'): number {
     if (op === '+') {
-      ++this.selectedMealQuantity;
+      ++this._selectedMealQuantity;
     } else {
-      if (this.selectedMealQuantity > 1) {
-        --this.selectedMealQuantity;
+      if (this._selectedMealQuantity > 1) {
+        --this._selectedMealQuantity;
       }
     }
-    return this.selectedMealQuantity;
+    return this._selectedMealQuantity;
   }
 
   // ~~ RETURNS ~~ //
 
-  returnSteps(): StepsT[] {
-    return this.steps;
+  get steps(): StepsT[] {
+    return this._steps;
   }
 
-  returnSelectedMeal(): MealListT {
-    return this.selectedMeal;
+  get selectedMeal(): MealListT {
+    return this._selectedMeal;
   }
 
-  returnSelectedMealQuantity(): number {
-    return this.selectedMealQuantity;
+  get selectedMealQuantity(): number {
+    return this._selectedMealQuantity;
   }
 
-  returnSelectedMealOptionsTotalPrice(): number {
+  get selectedMealOptionsTotalPrice(): number {
     this.calculateSelectedMealOptionsTotalPrice();
-    return this.selectedMealOptionsTotalPrice;
+    return this._selectedMealOptionsTotalPrice;
   }
 
-  returnSelectedMealOptions(): MealOptionsT[] {
-    return this.selectedMealOptions;
+  get selectedMealOptions(): MealOptionsT[] {
+    return this._selectedMealOptions;
   }
 
-  returnMeatOptions(): MealOptionsT[] {
+  get meatOptions(): MealOptionsT[] {
     return MEAT_JSON as MealOptionsT[];
   }
 
-  returnSauceOptions(): MealOptionsT[] {
+  get sauceOptions(): MealOptionsT[] {
     return SAUCE_JSON as MealOptionsT[];
   }
 
-  returnGarnishOptions(): MealOptionsT[] {
+  get garnishOptions(): MealOptionsT[] {
     return GARNISH_JSON as MealOptionsT[];
   }
 
   // ~~ PRIVATE ~~ //
 
   private calculateSelectedMealOptionsTotalPrice() {
-    this.selectedMealOptionsTotalPrice = 0;
-    this.selectedMealOptions.forEach((el) => (this.selectedMealOptionsTotalPrice += el.price));
+    this._selectedMealOptionsTotalPrice = 0;
+    this._selectedMealOptions.forEach((el) => (this._selectedMealOptionsTotalPrice += el.price));
   }
 }
