@@ -1,6 +1,6 @@
 <app-language-bar></app-language-bar>
 <section class="main">
-  <app-meal-categories (categoryChangedEvent)="refreshMealList()"></app-meal-categories>
+  <app-meal-categories></app-meal-categories>
   <section class="menu-block">
     <h1 class="heading">What will you be eating today?</h1>
     <div class="menu-items" #menuItems *ngIf="mealList.length; else noData">

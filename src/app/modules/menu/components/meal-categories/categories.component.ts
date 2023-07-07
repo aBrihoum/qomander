@@ -1,5 +1,4 @@
-import { Router } from '@angular/router';
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { MealCategoriesT } from 'src/app/modules/shared/services/meal-categories/meal-categories.model';
 import { MealCategoriesService } from 'src/app/modules/shared/services/meal-categories/meal-categories.service';
 
@@ -11,17 +10,10 @@ import { MealCategoriesService } from 'src/app/modules/shared/services/meal-cate
 export class MealCategoriesComponent {
   constructor(private MealCategoriesService: MealCategoriesService) {}
 
-  @Output() categoryChangedEvent = new EventEmitter<boolean>();
   mealCategories: MealCategoriesT[] = this.MealCategoriesService.mealCategories;
-  selectedMealCategory: MealCategoriesT = this.MealCategoriesService.selectedMealCategory;
+  selectedMealCategory = this.MealCategoriesService.selectedMealCategory;
 
   setMealCategory(index: number) {
     this.MealCategoriesService.setMealCategory(index);
-    this.refresh();
-  }
-
-  refresh() {
-    this.selectedMealCategory = this.MealCategoriesService.selectedMealCategory;
-    this.categoryChangedEvent.emit(true);
   }
 }

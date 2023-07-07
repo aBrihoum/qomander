@@ -11,7 +11,7 @@
     <ng-container *ngFor="let cat of mealCategories; index as i; last as last">
       <div
         class="category"
-        [class.category__selected]="cat.name === selectedMealCategory.name"
+        [class.category__selected]="cat.name === selectedMealCategory.value.name"
         (click)="setMealCategory(i)"
       >
         <img [src]="cat.picture" alt="{{ cat.name }}" class="category__picture" />
