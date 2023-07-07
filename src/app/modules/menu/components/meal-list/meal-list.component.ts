@@ -14,10 +14,10 @@ export class MealListComponent {
     private MealOptionsService: MealOptionsService
   ) {}
 
-  mealList: MealListT[] = this.MealListService.returnMealList();
+  mealList: MealListT[] = this.MealListService.mealList;
 
   refreshMealList() {
-    this.mealList = this.MealListService.returnMealList();
+    this.mealList = this.MealListService.mealList;
   }
 
   selectMeal(meal: MealListT) {

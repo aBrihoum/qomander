@@ -9,10 +9,10 @@ import { MealListT } from './meal-list.model';
 export class MealListService {
   constructor(private MealCategoriesService: MealCategoriesService) {}
 
-  private readonly mealList: MealListT[] = MEALLIST_JSON as MealListT[];
+  private readonly _mealList: MealListT[] = MEALLIST_JSON as MealListT[];
 
-  returnMealList() {
+  get mealList() {
     const selectedCategoryKey = this.MealCategoriesService.selectedMealCategory.key;
-    return this.mealList.filter((meal) => meal.categoryKey === selectedCategoryKey);
+    return this._mealList.filter((meal) => meal.categoryKey === selectedCategoryKey);
   }
 }
